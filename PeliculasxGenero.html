@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <link rel="stylesheet" href="css/tpi.css">
+    <meta charset="utf-8">
+    <title> PELICULAS POR GENERO</title>
+  </head>
+  <body>
+
+    <header class="header">
+                   <nav>
+                         <ul class="ul-logo">
+                               <li class="li-logo"><img src="img/logo.png" alt="" ></li>
+                         </ul>
+
+                         <ul class="ul-menu">
+
+
+                           <li class="li-menu" style="display:none"  id="myList"><a class="color-blue" href="pPreferidas.html"> Mi Lista</a></li>
+                           <li class="li-menu"><a class="color-blue" href="PeliculasxGenero.html">Generos</a></li>
+
+                           <li class="li-menu"><a class="color-blue" href="home.html" >Home</a></li>
+                             <li class="li-menu">    <button class=boton2 type="button" name="button">Login</button>  </li>
+                         </ul>
+
+                               <div class=cbusqueda>
+
+                                   <form class="Buscador" action="pagina4.html" method="get">
+                                     <p class = "errorBuscador"></p>
+                                     <input class="Busqueda"  type="search"  id="miBusqueda" name="q"   >
+                                     <button class="boton1"  type="submit" >buscar</button>
+                                     <span style="display:none" class="bienvenida"></span>
+                                   </form>
+                               </div>
+               </nav>
+
+
+
+           </header>
+      <section>
+
+
+
+      </section>
+
+      <div class="formulario">
+          <form class="informacion" action="home.html" method="get">
+            <p class="errorNombre"></p>
+            <input class ="name" type="text" name="nombre" value="" placeholder="Nombre">
+            <p class= "errorEmail"></p>
+            <input class="email" type="email" name="email" value="" placeholder="Email">
+
+              <p><label for="genero"> Genero</label></p>
+
+              <p><input type="radio" name="genero" value="" placeholder="" > Hombre
+                <input type="radio" name="genero" value="" placeholder=""> Mujer
+                <input type="radio" name="genero" value="" placeholder="">Otre </p>
+                <p> <button class="btnLogin"  type="submit" >Enviar</button></p>
+              </div>
+
+          </form>
+
+
+
+
+
+
+
+  </body>
+</html>
+<script type="text/javascript" src=js/generos.js>
+</script>
+<script type="text/javascript" src=js/login.js>
+</script>

@@ -17,8 +17,12 @@
 
 
                            <li class="li-menu" style="display:none"  id="myList"><a class="color-blue" href="pPreferidas.html"> Mi Lista</a></li>
-                           <li class="li-menu"><a class="color-blue" href="PeliculasxGenero.html">Generos</a></li>
+                           <!-- <li class="li-menu"><a class="color-blue" href="PeliculasxGenero.html">Generos</a> </li> -->
+                           <li class="li-menu">
+                             <select onchange= "location=this.value;">
 
+                               </select>
+                           </li>
                            <li class="li-menu"><a class="color-blue" href="home.html" >Home</a></li>
                              <li class="li-menu">    <button class=boton2 type="button" name="button">Login</button>  </li>
                          </ul>
@@ -37,7 +41,6 @@
 
 
            </header>
-
 
            <div class="formulario">
                <form class="informacion" action="home.html" method="get">
@@ -59,4 +62,6 @@
   </body>
 </html>
 <script type="text/javascript" src=js/login.js>
+</script>
+<script type="text/javascript" src=js/generos.js>
 </script>

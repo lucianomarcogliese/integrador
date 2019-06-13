@@ -16,8 +16,12 @@
 
 
                            <li class="li-menu" style="display:none"  id="myList"><a class="color-blue" href="pPreferidas.html"> Mi Lista</a></li>
-                           <li class="li-menu"><a class="color-blue" href="PeliculasxGenero.html">Generos</a></li>
+                           <!-- <li class="li-menu"><a class="color-blue" href="PeliculasxGenero.html">Generos</a> </li> -->
+                           <li class="li-menu">
+                             <select onchange= "location=this.value;">
 
+                               </select>
+                           </li>
                            <li class="li-menu"><a class="color-blue" href="home.html" >Home</a></li>
                              <li class="li-menu">    <button class=boton2 type="button" name="button">Login</button>  </li>
                          </ul>
@@ -32,26 +36,29 @@
                                    </form>
                                </div>
                </nav>
-               <div class="formulario">
-                   <form class="informacion" action="home.html" method="get">
-                     <p class="errorNombre"></p>
-                     <input class ="name" type="text" name="nombre" value="" placeholder="Nombre">
-                     <p class= "errorEmail"></p>
-                     <input class="email" type="email" name="email" value="" placeholder="Email">
 
-                       <p><label for="genero"> Genero</label></p>
-
-                       <p><input type="radio" name="genero" value="" placeholder="" > Hombre
-                         <input type="radio" name="genero" value="" placeholder=""> Mujer
-                         <input type="radio" name="genero" value="" placeholder="">Otre </p>
-                         <p> <button class="btnLogin"  type="submit" >Enviar</button></p>
-                       </div>
-
-                   </form>
 
 
            </header>
+           <div class="formulario">
+               <form class="informacion" action="home.html" method="get">
+                 <p class="errorNombre"></p>
+                 <input class ="name" type="text" name="nombre" value="" placeholder="Nombre">
+                 <p class= "errorEmail"></p>
+                 <input class="email" type="email" name="email" value="" placeholder="Email">
+
+                   <p><label for="genero"> Genero</label></p>
+
+                   <p><input type="radio" name="genero" value="" placeholder="" > Hombre
+                     <input type="radio" name="genero" value="" placeholder=""> Mujer
+                     <input type="radio" name="genero" value="" placeholder="">Otre </p>
+                     <p> <button class="btnLogin"  type="submit" >Enviar</button></p>
+                   </div>
+
+               </form>
   </body>
 </html>
 <script type="text/javascript" src=js/login.js>
+</script>
+<script type="text/javascript" src=js/generos.js>
 </script>

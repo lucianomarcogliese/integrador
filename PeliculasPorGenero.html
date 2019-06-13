@@ -2,46 +2,53 @@
 <html lang="en" dir="ltr">
   <head>
     <link rel="stylesheet" href="css/tpi.css">
+    <link rel="stylesheet" href="css/slideShow.css">
     <meta charset="utf-8">
     <title></title>
   </head>
   <body>
     <header class="header">
-                   <nav>
-                         <ul class="ul-logo">
-                               <li class="li-logo"><img src="img/logo.png" alt="" ></li>
-                         </ul>
+        <nav>
+             <ul class="ul-logo">
+                   <li class="li-logo"><img src="img/logo.png" alt="" ></li>
+             </ul>
+             <ul class="ul-menu">
+               <li class="li-menu" style="display:none"  id="myList"><a class="color-blue" href="pPreferidas.html"> Mi Lista</a></li>
+               <!-- <li class="li-menu"><a class="color-blue" href="PeliculasxGenero.html">Generos</a> </li> -->
+               <li class="li-menu">
+                 <select onchange= "location=this.value;">
 
-                         <ul class="ul-menu">
+                   </select>
+               </li>
+               <li class="li-menu"><a class="color-blue" href="home.html" >Home</a></li>
+                 <li class="li-menu">    <button class=boton2 type="button" name="button">Login</button>  </li>
+             </ul>
+             <div class=cbusqueda>
+                 <form class="Buscador" action="pagina4.html" method="get">
+                   <p class = "errorBuscador"></p>
+                   <input class="Busqueda"  type="search"  id="miBusqueda" name="q"   >
+                   <button class="boton1"  type="submit" >buscar</button>
+                   <span style="display:none" class="bienvenida"></span>
+                 </form>
+             </div>
+         </nav>
+   </header>
 
+  <h1>PELICULAS POR GENERO</h1>
+  <section class="generos slideshow-container">
+      <a class="prev" onclick="plusSlides(-1)"><span>&#10094;</span></a>
+      <a class="next" onclick="plusSlides(1)"><span>&#10095;</span></a>
+      <br>
+      <div class="thumbnails thumbnailsGeneros" style="text-align:center">
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+          <span class="dot" onclick="currentSlide(4)"></span>
+          <span class="dot" onclick="currentSlide(5)"></span>
+      </div>
+  </section>
 
-                           <li class="li-menu" style="display:none"  id="myList"><a class="color-blue" href="pPreferidas.html"> Mi Lista</a></li>
-                           <li class="li-menu"><a class="color-blue" href="PeliculasxGenero.html">Generos</a></li>
-
-                           <li class="li-menu"><a class="color-blue" href="home.html" >Home</a></li>
-                             <li class="li-menu">    <button class=boton2 type="button" name="button">Login</button>  </li>
-                         </ul>
-
-                               <div class=cbusqueda>
-
-                                   <form class="Buscador" action="pagina4.html" method="get">
-                                     <p class = "errorBuscador"></p>
-                                     <input class="Busqueda"  type="search"  id="miBusqueda" name="q"   >
-                                     <button class="boton1"  type="submit" >buscar</button>
-                                     <span style="display:none" class="bienvenida"></span>
-                                   </form>
-                               </div>
-               </nav>
-
-
-
-           </header>
-<h1>PELICULAS POR GENERO</h1>
-
-<section>
-
-</section>
-<div class="formulario">
+  <div class="formulario">
     <form class="informacion" action="home.html" method="get">
       <p class="errorNombre"></p>
       <input class ="name" type="text" name="nombre" value="" placeholder="Nombre">
@@ -63,7 +70,16 @@
 
   </body>
 </html>
+<script
+src="https://code.jquery.com/jquery-3.4.1.js"
+integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+crossorigin="anonymous">
+</script>
 <script type="text/javascript" src=js/peliculasxgenero.js>
 </script>
 <script type="text/javascript" src=js/login.js>
+</script>
+<script type="text/javascript" src=js/slideShow.js>
+</script>
+<script type="text/javascript" src=js/generos.js>
 </script>

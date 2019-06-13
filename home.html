@@ -23,10 +23,17 @@
 
 
                           <li class="li-menu" style="display:none"  id="myList"><a class="color-blue" href="pPreferidas.html"> Mi Lista</a></li>
-                          <li class="li-menu"><a class="color-blue" href="PeliculasxGenero.html">Generos</a></li>
+                          <!-- <li class="li-menu"><a class="color-blue" href="PeliculasxGenero.html">Generos</a> </li> -->
+                          <li class="li-menu">
+                            <select onchange= "location=this.value;">
+                              <option selected="true" disabled="disabled">seleccione el genero</option>
 
+                              </select>
+                          </li>
                           <li class="li-menu"><a class="color-blue" href="home.html" >Home</a></li>
-                            <li class="li-menu">    <button class=boton2 type="button" name="button">Login</button>  </li>
+                            <li class="li-menu register ">    <button class=boton2 type="button" name="button">Registrate</button>  </li>
+                            <li class= "li-menu logOut" style="display:none"><button type="button">Log out</button></li>
+                            <li class="li-menu login ">    <button class=loguiate type="button" name="button">Login</button>  </li>
                         </ul>
 
                               <div class=cbusqueda>
@@ -56,7 +63,7 @@
 
                   <br>
 
-                  <div class="thumbnails" style="text-align:center">
+                  <div class="thumbnails thumbnailsPopulares  " style="text-align:center">
                   	<span class="dot" onclick="currentSlide(1)"></span>
                   	<span class="dot" onclick="currentSlide(2)"></span>
                   	<span class="dot" onclick="currentSlide(3)"></span>
@@ -77,7 +84,7 @@
 
                                 <br>
 
-                                <div class="thumbnails" tyle="text-align:center">
+                                <div class="thumbnails thumbnailsPuntuadas" tyle="text-align:center">
                                 	<span class="dot dotPuntuadas" onclick="currentSlide1(1)"></span>
                                 	<span class="dot dotPuntuadas" onclick="currentSlide1(2)"></span>
                                 	<span class="dot dotPuntuadas" onclick="currentSlide1(3)"></span>
@@ -100,7 +107,7 @@
 
                                     <br>
 
-                                  <div class="thumbnails" style="text-align:center">
+                                  <div class="thumbnails thumbnailsEstrenos" style="text-align:center">
                                     	<span class="dot dotEstrenos" onclick="currentSlide2(1)"></span>
                                     	<span class="dot dotEstrenos" onclick="currentSlide2(2)"></span>
                                     	<span class="dot dotEstrenos" onclick="currentSlide2(3)"></span>
@@ -151,11 +158,27 @@
                     <p><input type="radio" name="genero" value="" placeholder="" > Hombre
                       <input type="radio" name="genero" value="" placeholder=""> Mujer
                       <input type="radio" name="genero" value="" placeholder="">Otre </p>
-                      <p> <button class="btnLogin"  type="submit" >Enviar</button></p>
+                      <p> <button class="btnLogin"  type="submit" >Registrate</button></p>
                     </div>
 
                 </form>
 
+                <div class="iniciaSesion">
+                    <form class="informacion" action="home.html" method="get">
+                      <p class="errorNombre"></p>
+                      <input class ="name" type="text" name="nombre" value="" placeholder="Nombre">
+                      <p class= "errorEmail"></p>
+                      <input class="email" type="email" name="email" value="" placeholder="Email">
+
+                        <p><label for="genero"> Genero</label></p>
+
+                        <p><input type="radio" name="genero" value="" placeholder="" > Hombre
+                          <input type="radio" name="genero" value="" placeholder=""> Mujer
+                          <input type="radio" name="genero" value="" placeholder="">Otre </p>
+                          <p> <button class="btnLogin"  type="submit" >Login</button></p>
+                        </div>
+
+                    </form>
 
 
 
@@ -181,4 +204,6 @@ crossorigin="anonymous">
   <script type="text/javascript" src=js/slideShow.js>
   </script>
   <script type="text/javascript" src=js/login.js>
+  </script>
+  <script type="text/javascript" src=js/generos.js>
   </script>

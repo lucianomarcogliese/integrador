@@ -1,11 +1,15 @@
 window.onload = function() {
 
-    console.log(localStorage);
+
+
+    var urlFija = " https://image.tmdb.org/t/p/original/"
+    var article = ""
+    var limite = 5
 
   var buscador = document.querySelector ("form.Buscador");
-  console.log(buscador);
+
   var inputBusqueda= document.querySelector ("input.Busqueda")
-  console.log(inputBusqueda);
+
 
   buscador.onsubmit = function () {
     if (inputBusqueda.value.length < 3 ) {
@@ -14,47 +18,50 @@ window.onload = function() {
       inputBusqueda.parentElement.querySelector("p.errorBuscador").innerText = "Minimo 3 caracteres";
       alert ("Minimo 3 caracteres")
     } }
-
-
-
-      
-
       var header = document.querySelector(".permitido")
       var bloqueado = document.querySelector (".formulario")
       var btn =document.querySelector(".boton2")
       btn.onclick = function (event) {
         bloqueado.style.display = "block";
         header.style.display ="none";
+
+        //Login
+
+        // var encabezado = document.querySelector(".permitido")
+        // var blocked = document.querySelector (".iniciaSesion")
+        // var loguea =document.querySelector(".loguiate")
+        // loguea.onclick = function (event) {
+        //   blocked.style.display = "block";
+        //   encabezado.style.display ="none";
+
       }
-      var urlFija = " https://image.tmdb.org/t/p/original/"
 
     fetch("https://api.themoviedb.org/3/movie/popular?api_key=72c0f0e3c6590f5af907c8bd0778da1d&language=en-US&page=1" )
           .then(function(respuesta) {
           return respuesta.json()
           })
           .then(function(informacion) {
-          console.log(informacion);
 
           var arrayDePeliculas = informacion.results
-          console.log(arrayDePeliculas);
-          var article = ""
-          var limite = 5
+
+
           for (var i = 0; i < limite; i++) {
               // IDEA: var id = arrayDeGifs[i].id
               var title = arrayDePeliculas[i].title
               var url =  arrayDePeliculas[i].poster_path
-              console.log(url);
+
 
 
 
                // IDEA: document.querySelector(".populares").innerHTML += ' <article class= "mySlides fade"> <a href=detallePelicula.html <p>  '+ title +  "</p> "  +   "<img src= " + urlFija + url + " width= 100px  </a> </article>"
 
 
-               article = "<article class='mySlides fade'> "
-              article += "<div class='numbertext'>" + (i+1) + " / "+limite+"</div>"
-              article += "<a href='detallePelicula.html'> <p>" + title + "</p> "
-              article += "<img src= " + urlFija + url + " width='30%'  >"
-              article += "  </a> </article>"
+              article = "<article class='mySlides fade'> "
+              article +=    "<a href='detallePelicula.html'> <p>" + title + "</p> "
+              article +=      "<img src= " + urlFija + url + " width='30%'  >"
+              article +=    "</a>"
+              article +=    "<div class='numbertext'>" + (i+1) + " / "+limite+"</div>"
+              article += "</article>"
               document.querySelector("section.populares ").innerHTML += article
           }
               showSlides(slideIndex);
@@ -70,10 +77,10 @@ window.onload = function() {
                   return respuesta.json()
             })
                   .then(function(informacion) {
-                  console.log(informacion);
+
 
                   var arrayDePuntuadas = informacion.results
-                  console.log(arrayDePuntuadas);
+
 
                   for (var i = 0; i < 5; i++) {
                   // IDEA: var id = arrayDeGifs[i].id
@@ -82,10 +89,11 @@ window.onload = function() {
                       // IDEA: console.log(url);
 
                       article2 = "<article class='mySlidesPuntuadas fade'> "
-                     article2 += "<div class='numbertext'>" + i + " / 5</div>"
-                     article2 += " <a href='detallePelicula.html'> <p> " + title2 + "</p> "
-                     article2 += "<img src= " + urlFija + url2 + " width='30%'  >"
-                     article2 += "  </a> </article>"
+                      article2 +=   " <a href='detallePelicula.html'> <p> " + title2 + "</p> "
+                     article2 +=        "<img src= " + urlFija + url2 + " width='30%'  >"
+                     article2 +=    "</a>"
+                     article2 +=    "<div class='numbertext'>" + (i+1) + " / "+limite+"</div>"
+                     article2 +=  "</article>"
                      document.querySelector("section.puntuadas ").innerHTML += article2
 
 
@@ -103,22 +111,24 @@ window.onload = function() {
                         .then(function(respuesta) {
                         return respuesta.json()
                   })
-                        .then(function(informacion) {
-                        console.log(informacion);
+                  .then(function(informacion) {
+
 
                   var arrayDeEstrenos = informacion.results
-                  console.log(arrayDeEstrenos);
 
+
+                  var title3
+                  var url3
                   for (var i = 0; i < 5; i++) {
                   // IDEA: var id = arrayDeGifs[i].id
-                  var title3 = arrayDeEstrenos[i].title
-                  var url3 =  arrayDeEstrenos[i].poster_path
-                    console.log(url3);
+                  title3 = arrayDeEstrenos[i].title
+                  url3 =  arrayDeEstrenos[i].poster_path
+
 
                     article = "<article class='mySlidesEstrenos fade'> "
-                    article += "<div class='numbertext'>" + i + " / 5</div>"
                     article += "<a href='detallePelicula.html'> <p>" + title3 + "</p> "
                     article += "<img src= " + urlFija + url3 + " width='30%'  >"
+                    article +="<div class='numbertext'>" + (i+1) + " / "+limite+"</div>"
                     article += "  </a> </article>"
                     document.querySelector("section.estrenos ").innerHTML += article
 

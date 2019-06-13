@@ -1,14 +1,14 @@
 // jQuery
 
 
-$(' slideshow-container').hover(function(){
-		$('.prev').animate({"left":"5px"}, "fast");
-		$('.next').animate({"right":"5px"}, "fast");
-	}, function() {
-		$('.prev').animate({"left":"-50px"}, "fast")
-		$('.next').animate({"right":"-50px"}, "fast")
-	}
-);
+// $(' slideshow-container').hover(function(){
+// 		$('.prev').animate({"left":"5px"}, "fast");
+// 		$('.next').animate({"right":"5px"}, "fast");
+// 	}, function() {
+// 		$('.prev').animate({"left":"-50px"}, "fast")
+// 		$('.next').animate({"right":"-50px"}, "fast")
+// 	}
+// );
 
 var slideIndex = 1;
 
@@ -33,6 +33,7 @@ function showSlides(n) {
 	for (i = 0; i < dots.length; i++) {
 		dots[i].className = dots[i].className.replace(" active", "");
 	}
+	// IDEA: console.log(slides[slideIndex-1]);
 	slides[slideIndex-1].style.display = "block";
 	dots[slideIndex-1].className += " active";
 }
@@ -88,7 +89,7 @@ function showSlides2(n) {
 	for (i = 0; i < slides.length; i++) {
 		slides[i].style.display = "none";
 	}
-  console.log("aca");
+
 	for (i = 0; i < dots.length; i++) {
 		dots[i].className = dots[i].className.replace(" active", "");
 	}
@@ -97,4 +98,36 @@ function showSlides2(n) {
 
 	dots[slideIndex2-1].className += " active";
 }
-console.log("acaaa");
+
+
+//por generos
+
+var slideIndex3 = 1;
+
+
+function plusSlides3(n) {
+	showSlides3(slideIndex2 += n);
+}
+
+function currentSlide3(n) {
+	showSlides3(slideIndex3 = n);
+}
+
+function showSlides3(n) {
+	var i;
+	var slides = document.getElementsByClassName("mySlidesGeneros");
+	var dots = document.getElementsByClassName("dotGeneros");
+	if (n > slides.length) {slideIndex2 = 1}
+	if (n < 1) {slideIndex2 = slides.length}
+	for (i = 0; i < slides.length; i++) {
+		slides[i].style.display = "none";
+	}
+
+	for (i = 0; i < dots.length; i++) {
+		dots[i].className = dots[i].className.replace(" active", "");
+	}
+
+	slides[slideIndex3-1].style.display = "block";
+
+	dots[slideIndex3-1].className += " active";
+}

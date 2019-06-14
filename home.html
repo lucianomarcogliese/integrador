@@ -22,7 +22,7 @@
                         <ul class="ul-menu">
 
 
-                          <li class="li-menu" style="display:none"  id="myList"><a class="color-blue" href="pPreferidas.html"> Mi Lista</a></li>
+                          <li class="li-menu" style="display:none"  id="myList"><a class="color-white" href="pPreferidas.html"> Mi Lista</a></li>
                           <!-- <li class="li-menu"><a class="color-blue" href="PeliculasxGenero.html">Generos</a> </li> -->
                           <li class="li-menu">
                             <select onchange= "location=this.value;">
@@ -30,10 +30,10 @@
 
                               </select>
                           </li>
-                          <li class="li-menu"><a class="color-blue" href="home.html" >Home</a></li>
+                          <li class="li-menu"><a class="color-white" href="home.html" >Home</a></li>
                             <li class="li-menu register ">    <button class=boton2 type="button" name="button">Registrate</button>  </li>
                             <li class= "li-menu logOut" style="display:none"><button type="button">Log out</button></li>
-                            <li class="li-menu login ">    <button class=loguiate type="button" name="button">Login</button>  </li>
+                            <li class="li-menu login loguiate ">    <button type="button" name="button">Login</button>  </li>
                         </ul>
 
                               <div class=cbusqueda>
@@ -164,10 +164,10 @@
                 </form>
 
                 <div class="iniciaSesion">
-                    <form class="informacion" action="home.html" method="get">
-                      <p class="errorNombre"></p>
+                    <form class="sesion" action="home.html" method="get">
+                      <p class="loginNombre"></p>
                       <input class ="name" type="text" name="nombre" value="" placeholder="Nombre">
-                      <p class= "errorEmail"></p>
+                      <p class= "loginEmail"></p>
                       <input class="email" type="email" name="email" value="" placeholder="Email">
 
                         <p><label for="genero"> Genero</label></p>
@@ -179,10 +179,6 @@
                         </div>
 
                     </form>
-
-
-
-
 
 
 
@@ -206,4 +202,6 @@ crossorigin="anonymous">
   <script type="text/javascript" src=js/login.js>
   </script>
   <script type="text/javascript" src=js/generos.js>
+  </script>
+  <script type="text/javascript" src=js/registrate.js>
   </script>

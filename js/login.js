@@ -16,13 +16,13 @@ theForm.onsubmit = function () {
     error = 1
     event.preventDefault ();
     inputName.classList.add ("error");
-    inputName.parentElement.querySelector("p.errorNombre").innerText = "obligatorio";
+    inputName.parentElement.querySelector("p.errorNombre").innerText = "Obligatorio";
   }
   if (inputEmail.value == "") {
     error = 1
     event.preventDefault ();
     inputEmail.classList.add ("error");
-    inputEmail.parentElement.querySelector("p.errorEmail").innerText = "obligatorio";
+    // IDEA: inputEmail.parentElement.querySelector("p.errorEmail").innerText = "obligatorio";
   }
 
   if (error == 0) {

@@ -16,25 +16,28 @@ window.onload = function() {
       event.preventDefault ();
       inputBusqueda.classList.add ("error");
       inputBusqueda.parentElement.querySelector("p.errorBuscador").innerText = "Minimo 3 caracteres";
-      alert ("Minimo 3 caracteres")
+      setTimeout(function() {
+          inputBusqueda.parentElement.querySelector("p.errorBuscador").style.display = "none"
+      }, 3000)
+
     } }
       var header = document.querySelector(".permitido")
       var bloqueado = document.querySelector (".formulario")
       var btn =document.querySelector(".boton2")
       btn.onclick = function (event) {
         bloqueado.style.display = "block";
-        header.style.display ="none";
+        header.style.display ="none";  }
 
         //Login
 
-        // var encabezado = document.querySelector(".permitido")
-        // var blocked = document.querySelector (".iniciaSesion")
-        // var loguea =document.querySelector(".loguiate")
-        // loguea.onclick = function (event) {
-        //   blocked.style.display = "block";
-        //   encabezado.style.display ="none";
+         var encabezado = document.querySelector(".permitido")
+         var blocked = document.querySelector (".iniciaSesion")
+         var loguea =document.querySelector(".loguiate")
+         loguea.onclick = function (event) {
+           blocked.style.display = "block";
+          encabezado.style.display ="none"; }
 
-      }
+
 
     fetch("https://api.themoviedb.org/3/movie/popular?api_key=72c0f0e3c6590f5af907c8bd0778da1d&language=en-US&page=1" )
           .then(function(respuesta) {
@@ -46,7 +49,8 @@ window.onload = function() {
 
 
           for (var i = 0; i < limite; i++) {
-              // IDEA: var id = arrayDeGifs[i].id
+              var id = arrayDePeliculas[i].id
+
               var title = arrayDePeliculas[i].title
               var url =  arrayDePeliculas[i].poster_path
 
@@ -54,10 +58,11 @@ window.onload = function() {
 
 
                // IDEA: document.querySelector(".populares").innerHTML += ' <article class= "mySlides fade"> <a href=detallePelicula.html <p>  '+ title +  "</p> "  +   "<img src= " + urlFija + url + " width= 100px  </a> </article>"
-
+                // IDEA: <a href=detalleGif.html?id=" + id + ">"
 
               article = "<article class='mySlides fade'> "
-              article +=    "<a href='detallePelicula.html'> <p>" + title + "</p> "
+              article +=    "<a href=detallePelicula.html?id=" + id +   ">"
+              article +=    " <p>" + title + "</p> "
               article +=      "<img src= " + urlFija + url + " width='30%'  >"
               article +=    "</a>"
               article +=    "<div class='numbertext'>" + (i+1) + " / "+limite+"</div>"
@@ -83,13 +88,14 @@ window.onload = function() {
 
 
                   for (var i = 0; i < 5; i++) {
-                  // IDEA: var id = arrayDeGifs[i].id
+                  var id = arrayDePuntuadas[i].id
                   var title2 = arrayDePuntuadas[i].title
                   var url2 =  arrayDePuntuadas[i].poster_path
                       // IDEA: console.log(url);
 
                       article2 = "<article class='mySlidesPuntuadas fade'> "
-                      article2 +=   " <a href='detallePelicula.html'> <p> " + title2 + "</p> "
+                      article2 +=  "<a href=detallePelicula.html?id=" + id +   ">"
+                      article2 +=  "<p> " + title2 + "</p> "
                      article2 +=        "<img src= " + urlFija + url2 + " width='30%'  >"
                      article2 +=    "</a>"
                      article2 +=    "<div class='numbertext'>" + (i+1) + " / "+limite+"</div>"
@@ -119,14 +125,16 @@ window.onload = function() {
 
                   var title3
                   var url3
+                  var id
                   for (var i = 0; i < 5; i++) {
-                  // IDEA: var id = arrayDeGifs[i].id
+                     id= arrayDeEstrenos[i].id
                   title3 = arrayDeEstrenos[i].title
                   url3 =  arrayDeEstrenos[i].poster_path
 
 
                     article = "<article class='mySlidesEstrenos fade'> "
-                    article += "<a href='detallePelicula.html'> <p>" + title3 + "</p> "
+                    article +="<a href=detallePelicula.html?id=" + id+   ">"
+                    article +=  " <p>" + title3 + "</p> "
                     article += "<img src= " + urlFija + url3 + " width='30%'  >"
                     article +="<div class='numbertext'>" + (i+1) + " / "+limite+"</div>"
                     article += "  </a> </article>"

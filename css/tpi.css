@@ -9,8 +9,8 @@
 .color-gainsboro {
   color: gainsboro;
 }
-.color-blue {
-  color: darkblue;
+.color-black {
+  color: #6E6865;
 }
 
 .background-orange {
@@ -18,7 +18,9 @@
 
 
 }
-
+body{
+  background: gainsboro;
+}
 /* body {
   background-image: url(fondo.png);
 
@@ -34,8 +36,8 @@
 .boton {
   width: 80px;
   height: 40px;
-  border-radius: 15px;
-  background-color: lightblue;
+
+
   font-weight: bold;
   font-size: 0.5em;
 
@@ -47,8 +49,8 @@
   width: 80px;
   height: 40px;
   margin-top: 35px;
-  border-radius: 15px;
-  background-color: lightblue;
+
+
   font-weight: bold;
   font-size: 1em;
 }
@@ -61,7 +63,7 @@ nav {
 
 header {
   /* IDEA: border-radius: 20px;  */
-  background-color: lightblue;
+  background-color: #6E6865;
 }
 nav ul {
   margin: 0;
@@ -108,7 +110,7 @@ div.cbusqueda{
 }
 
 .formulario {
-  background-color: lightblue;
+  background-color: #6E6865;
   color: gainsboro;
   font-size: 50px;
   text-align: center;
@@ -117,7 +119,7 @@ div.cbusqueda{
   display: none;
 }
 .iniciaSesion {
-  background-color: lightblue;
+  background-color: #6E6865;
   color: gainsboro;
   font-size: 50px;
   text-align: center;
@@ -126,16 +128,13 @@ div.cbusqueda{
   display: none;
 }
 .footer {
-  background-color: lightblue;
+  background-color: #6E6865;
   /* IDEA: border-radius: 15px;  */
     overflow: hidden;
 height: 100px;
 
 }
-.ul-footer {
 
-
-}
 
 .li-footer {
   float: left;
@@ -199,3 +198,6 @@ article {
       width: 100%;
       text-align: center;
     }
+section.detalle {
+  overflow: hidden;
+}

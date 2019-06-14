@@ -2,6 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <link rel="stylesheet" href="css/tpi.css">
+    <link rel="stylesheet" href="css/slideShow.css">
     <meta charset="utf-8">
     <title>DETALLES</title>
   </head>
@@ -41,8 +42,29 @@
 
 
            </header>
-  <h1>detalles</h1>
 
+
+<section class=detalle>
+<button class= "botonsito" type="button" name="button"> Ver recomendaciones</button>
+</section>
+<br>
+<section style=display:none class="recomendadas slideshow-container">
+
+  <a class="prev" onclick="plusSlides(-1)"><span>&#10094;</span></a>
+  <a class="next" onclick="plusSlides(1)"><span>&#10095;</span></a>
+
+
+<br>
+
+<div class="thumbnails thumbnailsPopulares" style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+  <span class="dot" onclick="currentSlide(4)"></span>
+  <span class="dot" onclick="currentSlide(5)"></span>
+</div>
+</section>
+<button class= "botonsito" type="button" name="button"> Agregar a My List</button>
 
   <div class="formulario">
       <form class="informacion" action="home.html" method="get">
@@ -62,11 +84,19 @@
       </form>
   </body>
 </html>
-
+<script
+src="https://code.jquery.com/jquery-3.4.1.js"
+integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+crossorigin="anonymous">
+</script>
 <script type="text/javascript" src="js/favoritos.js">
 
 </script>
 <script type="text/javascript" src=js/login.js>
 </script>
 <script type="text/javascript" src=js/generos.js>
+</script>
+<script type="text/javascript" src=js/detalles.js>
+</script>
+<script type="text/javascript" src=js/slideShow.js>
 </script>

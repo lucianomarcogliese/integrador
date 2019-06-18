@@ -5,14 +5,16 @@ window.onload = function() {
   var bloqueado = document.querySelector (".formulario")
   var btn =document.querySelector(".boton2")
   btn.onclick = function (event) {
+    alert("hola")
     bloqueado.style.display = "block";
     header.style.display ="none";  }
-    var encabezado = document.querySelector(".permitido")
-    var blocked = document.querySelector (".iniciaSesion")
-    var loguea =document.querySelector(".loguiate")
-    loguea.onclick = function (event) {
-      blocked.style.display = "block";
-     encabezado.style.display ="none"; }
+
+    // var encabezado = document.querySelector(".permitido")
+    // var blocked = document.querySelector (".iniciaSesion")
+    // var loguea =document.querySelector(".loguiate")
+    // loguea.onclick = function (event) {
+    //   blocked.style.display = "block";
+    //  encabezado.style.display ="none"; }
 
 
 
@@ -69,13 +71,7 @@ if (favoritos != null) {
         var arrayDeGeneros = informacion.genres
         var generos = ""
         var idDeGeneros = ""
-        for (var i = 0; i < arrayDeGeneros.length; i++) {
 
-          generos += arrayDeGeneros [i].name + "<br>"
-          idDeGeneros = arrayDeGeneros [i].id
-          console.log(idDeGeneros);
-          console.log(generos);
-        }
         for (var i=0; i < arrayDeLanguage.length; i++) {
               language += arrayDeLanguage[i].name
         }
@@ -89,7 +85,12 @@ if (favoritos != null) {
                               article +=  " <h1>" + titulo+ "</h1> "
                              article += "<img src= " + urlFija + url + " width='30%'  >"
                             // IDEA: rticle +=    "<a href=PeliculasPorGenero.html?id=" + idDeGeneros +   ">"
-                             article += " Generos a los que pertenece"  +  "<a href=PeliculasPorGenero.html?id=" + idDeGeneros +  ">" +   " <ul>"    + generos + "</ul>  </a>  "
+                             article +=  "<ul>"
+                             for (var i = 0; i < arrayDeGeneros.length; i++) {
+                                 article += "<li>  <a href='PeliculasPorGenero.html?id=" + arrayDeGeneros[i].id +  "'>" +  arrayDeGeneros[i].name +  "</a> </li>"
+                             }
+                            article +=  "</ul>"
+
                              article += "<p>" + sinopsis + "</p>"
                              article += "<p>" + language + "</p>"
                              article += "<h4>" + fecha + "</h4>"

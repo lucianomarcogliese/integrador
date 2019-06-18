@@ -8,32 +8,42 @@
   </head>
   <body>
     <header class="header">
-        <nav>
-             <ul class="ul-logo">
-                   <li class="li-logo"><img src="img/logo.png" alt="" ></li>
-             </ul>
-             <ul class="ul-menu">
-               <li class="li-menu" style="display:none"  id="myList"><a class="color-blue" href="pPreferidas.html"> Mi Lista</a></li>
-               <!-- <li class="li-menu"><a class="color-blue" href="PeliculasxGenero.html">Generos</a> </li> -->
-               <li class="li-menu">
-                 <select onchange= "location=this.value;">
+                   <nav>
+                         <ul class="ul-logo">
+                               <li class="li-logo"><img src="img/logo.png" alt="" ></li>
+                         </ul>
 
-                   </select>
-               </li>
-               <li class="li-menu"><a class="color-blue" href="home.html" >Home</a></li>
-                 <li class="li-menu">    <button class=boton2 type="button" name="button">Login</button>  </li>
-             </ul>
-             <div class=cbusqueda>
-                 <form class="Buscador" action="pagina4.html" method="get">
-                   <p class = "errorBuscador"></p>
-                   <input class="Busqueda"  type="search"  id="miBusqueda" name="q"   >
-                   <button class="boton1"  type="submit" >buscar</button>
-                   <span style="display:none" class="bienvenida"></span>
-                 </form>
-             </div>
-         </nav>
-   </header>
+                         <ul class="ul-menu">
 
+
+                           <li class="li-menu" style="display:none"  id="myList"><a class="color-white" href="pPreferidas.html"> Mi Lista</a></li>
+                           <!-- <li class="li-menu"><a class="color-blue" href="PeliculasxGenero.html">Generos</a> </li> -->
+                           <li class="li-menu">
+                             <select onchange= "location=this.value;">
+                               <option selected="true" disabled="disabled">seleccione el genero</option>
+
+                               </select>
+                           </li>
+                           <li class="li-menu"><a class="color-white" href="home.html" >Home</a></li>
+                             <li class="li-menu register ">    <button class=boton2 type="button" name="button">Registrate</button>  </li>
+                             <li class= "li-menu logOut" style="display:none"><button type="button">Log out</button></li>
+                             <li class="li-menu login loguiate ">    <button type="button" name="button">Login</button>  </li>
+                         </ul>
+
+                               <div class=cbusqueda>
+
+                                   <form class="Buscador" action="pagina4.html" method="get">
+                                     <p class = "errorBuscador"></p>
+                                     <input class="Busqueda"  type="search"  id="miBusqueda" name="q"   >
+                                     <button class="boton1"  type="submit" >buscar</button>
+                                     <span style="display:none" class="bienvenida"></span>
+                                   </form>
+                               </div>
+               </nav>
+
+
+
+           </header>
   <h1>PELICULAS POR GENERO</h1>
   <section class="generos slideshow-container">
       <a class="prev" onclick="plusSlides(-1)"><span>&#10094;</span></a>

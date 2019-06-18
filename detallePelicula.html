@@ -17,15 +17,18 @@
                          <ul class="ul-menu">
 
 
-                           <li class="li-menu" style="display:none"  id="myList"><a class="color-blue" href="pPreferidas.html"> Mi Lista</a></li>
+                           <li class="li-menu" style="display:none"  id="myList"><a class="color-white" href="pPreferidas.html"> Mi Lista</a></li>
                            <!-- <li class="li-menu"><a class="color-blue" href="PeliculasxGenero.html">Generos</a> </li> -->
                            <li class="li-menu">
                              <select onchange= "location=this.value;">
+                               <option selected="true" disabled="disabled">seleccione el genero</option>
 
                                </select>
                            </li>
-                           <li class="li-menu"><a class="color-blue" href="home.html" >Home</a></li>
-                             <li class="li-menu">    <button class=boton2 type="button" name="button">Login</button>  </li>
+                           <li class="li-menu"><a class="color-white" href="home.html" >Home</a></li>
+                             <li class="li-menu register ">    <button class=boton2 type="button" name="button">Registrate</button>  </li>
+                             <li class= "li-menu logOut" style="display:none"><button type="button">Log out</button></li>
+                             <li class="li-menu login loguiate ">    <button type="button" name="button">Login</button>  </li>
                          </ul>
 
                                <div class=cbusqueda>
@@ -45,10 +48,11 @@
 
 
 <section class=detalle>
-<button class= "botonsito" type="button" name="button"> Ver recomendaciones</button>
+  <!-- <button class= "favorito" type="button" name="button"> Agregar a My List</button> -->
 </section>
 <br>
-<section style=display:none class="recomendadas slideshow-container">
+<button class= "botonsito" type="button" name="button"> Ver recomendaciones</button>
+<section style="display:none" class="recomendadas slideshow-container">
 
   <a class="prev" onclick="plusSlides(-1)"><span>&#10094;</span></a>
   <a class="next" onclick="plusSlides(1)"><span>&#10095;</span></a>
@@ -56,7 +60,7 @@
 
 <br>
 
-<div class="thumbnails thumbnailsPopulares" style="text-align:center">
+<div class="thumbnails " style="text-align:center">
   <span class="dot" onclick="currentSlide(1)"></span>
   <span class="dot" onclick="currentSlide(2)"></span>
   <span class="dot" onclick="currentSlide(3)"></span>
@@ -64,7 +68,6 @@
   <span class="dot" onclick="currentSlide(5)"></span>
 </div>
 </section>
-<button class= "botonsito" type="button" name="button"> Agregar a My List</button>
 
   <div class="formulario">
       <form class="informacion" action="home.html" method="get">
@@ -90,7 +93,6 @@ integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
 crossorigin="anonymous">
 </script>
 <script type="text/javascript" src="js/favoritos.js">
-
 </script>
 <script type="text/javascript" src=js/login.js>
 </script>

@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito&display=swap');
+article {
+height: 110vh;
+}
+
+section.informacion {
+  position: relative;
+  left: 36%;
+  top: -550px;
+  margin: 0;
+  font-family: Nunito;
+
+
+}
+
+p.sinopsis{
+  width: 63%;
+text-align: justify;
+}
+ul.generos {
+  list-style-type: none;
+  border-left: 7px solid black;
+
+
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+.favorito {position: relative;
+    left: 35%;
+    bottom: 200px }
+.video {
+  
+}

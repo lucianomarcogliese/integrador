@@ -1,15 +1,8 @@
-/* window.onload = function() {
+window.addEventListener("load",function() {
 
  // Registrate
- // var encabezado = document.querySelector(".permitido")
- // var blocked = document.querySelector (".iniciaSesion")
- // var loguea =document.querySelector(".loguiate")
- // loguea.onclick = function (event) {
- //   blocked.style.display = "block";
- //  encabezado.style.display ="none"; }
 
-
-var theForm = document.querySelector ("form.sesion");
+var theForm = document.querySelector ("form.informacion");
 
 var inputName= document.querySelector ("input.name")
 
@@ -23,15 +16,14 @@ theForm.onsubmit = function () {
     error = 1
     event.preventDefault ();
     inputName.classList.add ("error");
-    inputName.parentElement.querySelector("p.loginNombre").innerText = "obligatorio";
+    inputName.parentElement.querySelector("p.errorNombre").innerText = "Obligatorio";
   }
   if (inputEmail.value == "") {
     error = 1
     event.preventDefault ();
     inputEmail.classList.add ("error");
-    inputEmail.parentElement.querySelector("p.loginEmail").innerText = "obligatorio";
+    // IDEA: inputEmail.parentElement.querySelector("p.errorEmail").innerText = "obligatorio";
   }
-
 
   if (error == 0) {
     // event.preventDefault ();
@@ -57,7 +49,10 @@ theForm.onsubmit = function () {
     out.onclick = function (event) {
       sessionStorage.removeItem("name")
       window.location.href = "home.html"
-
+      // IDEA: document.querySelector(".register").style.display="block";
+      // IDEA: document.querySelector(".logOut").style.display="none";
+      // IDEA: document.querySelector(".login").style.display="block";
+      // IDEA: console.log(btnLogin);
 
    }
     // IDEA: btnLogin.style.display = "none"
@@ -68,6 +63,12 @@ theForm.onsubmit = function () {
 
   } else {
      // IDEA: no.
-     }
-   }
-   */
+  }
+  console.log(localStorage);
+  if (localStorage.getItem("email") == email ) {
+
+    theForm.onsubmit
+  } else {
+    event.preventDefault
+  }
+}

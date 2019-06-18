@@ -73,7 +73,7 @@ if (favoritos != null) {
         var idDeGeneros = ""
 
         for (var i=0; i < arrayDeLanguage.length; i++) {
-              language += arrayDeLanguage[i].name
+              language += arrayDeLanguage[i].name + ","
         }
 
         // IDEA: var language = informacion.original_language
@@ -83,20 +83,21 @@ if (favoritos != null) {
 
                               article = "<article>"
                               article +=  " <h1>" + titulo+ "</h1> "
-                             article += "<img src= " + urlFija + url + " width='30%'  >"
+                             article += "<li> <img src= " + urlFija + url + " width='30%'  > </li>"
                             // IDEA: rticle +=    "<a href=PeliculasPorGenero.html?id=" + idDeGeneros +   ">"
-                             article +=  "<ul>"
+                             article +=   " <section class='informacion'> <ul class='generos'>" + "Los generos a los que pertenece"
                              for (var i = 0; i < arrayDeGeneros.length; i++) {
                                  article += "<li>  <a href='PeliculasPorGenero.html?id=" + arrayDeGeneros[i].id +  "'>" +  arrayDeGeneros[i].name +  "</a> </li>"
                              }
                             article +=  "</ul>"
 
-                             article += "<p>" + sinopsis + "</p>"
-                             article += "<p>" + language + "</p>"
-                             article += "<h4>" + fecha + "</h4>"
-                             article +=  "<div>" + trailer + "<div>"
+                             article += "Sinopsis" + "<p class='sinopsis'>" + sinopsis + "</p>"
+                             article += "Idiomas" + "<p>" + language + "</p>"
+                             article += "Fecha de estreno" + "<h4>" + fecha + "</h4>"
 
-                             article += "   </article>"
+                             // IDEA: rticle +=  "<div>" + trailer + "<div>"
+
+                             article += " </section>  </article>"
                              document.querySelector("section.detalle ").innerHTML += article
 
                              if (favoritos.indexOf(idPeliculas) >= 0) {
@@ -150,53 +151,41 @@ console.log("holaaaaaaa");
     })
 
 
-//video
-// IDEA: "https://api.themoviedb.org/3/movie/"+ idPeliculas + "/videos?api_key=72c0f0e3c6590f5af907c8bd0778da1d&language=en-US"
-// IDEA: : https://api.themoviedb.org/3/movie/550/videos?api_key=72c0f0e3c6590f5af907c8bd0778da1d
-//   var youtube =  "https://www.youtube.com/watch?v="
-// fetch("https://api.themoviedb.org/3/movie/" + idPeliculas + "/videos?api_key=72c0f0e3c6590f5af907c8bd0778da1d")
-//   .then(function(respuesta) {
-//     return respuesta.json()
-//   })
-//   .then(function(informacion) {
-//     console.log(informacion);
-//
-//     var arrayDeVideos = informacion.results
-//     console.log(arrayDeVideos);
-//
-//     for (var i = 0; i < limite; i++) {
-//
-//       var key = arrayDeVideos[i].key
-//       console.log(key);
-//
-//
-//        article = "<p> "
-//
-//       article +=   " <a href=" + youtube + key + ">" + "</a>"
-//
-//        article += "</p>"
-//       document.querySelector("section.detalle ").innerHTML += article
-//     }
-//   })
+// video
+
+fetch("https://api.themoviedb.org/3/movie/"   + idPeliculas +   "/videos?api_key=72c0f0e3c6590f5af907c8bd0778da1d&language=en-US")
+  .then(function(respuesta) {
+    return respuesta.json()
+  })
+  .then(function(informacion) {
+    console.log(informacion);
+    var arrayDeVideos = informacion.results
+    console.log(arrayDeVideos);
+var key = arrayDeVideos[0].key
+console.log(key);
+document.querySelector("iframe").src = "https://www.youtube.com/embed/" + key + ""
+
+
+  })
+  .catch (function(error){
+    consologe.log("The error was: " + error)
+  })
+  // var iframe = document.querySelector("iframe")
+  // var video = document.querySelector (".video")
+  // video.onclick = function (event) {
+  //   iframe.style.display = "block"; }
+
 //
 //
 //
-//   .catch(function(error) {
-//     console.log("Error: " + error);
-//   })
-
-
-
-
-
-
-
-
-
-
-
-
-//recomendadas
+//
+//
+//
+//
+//
+//
+//
+// //recomendadas
 var urlFija = " https://image.tmdb.org/t/p/original/"
 var limite = 5
 

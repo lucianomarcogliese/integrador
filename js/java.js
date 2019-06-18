@@ -27,17 +27,23 @@ window.onload = function() {
       btn.onclick = function (event) {
         bloqueado.style.display = "block";
         header.style.display ="none";  }
-
+        var header1 = document.querySelector(".permitido")
+        var bloqueado1 = document.querySelector (".formulario")
+        var btn1 =document.querySelector(".loguin")
+        btn1.onclick = function (event) {
+          bloqueado1.style.display = "block";
+          header1.style.display ="none";  }
         //Login
 
-         var encabezado = document.querySelector(".permitido")
-         var blocked = document.querySelector (".iniciaSesion")
-         var loguea =document.querySelector(".loguiate")
-         loguea.onclick = function (event) {
-           blocked.style.display = "block";
-          encabezado.style.display ="none"; }
+         // var encabezado = document.querySelector(".permitido")
+         // var blocked = document.querySelector (".iniciaSesion")
+         // var loguea =document.querySelector(".loguiate")
+         // loguea.onclick = function (event) {
+         //   blocked.style.display = "block";
+         //  encabezado.style.display ="none"; }
 
 
+// IDEA: https://api.themoviedb.org/3/movie/popular?api_key=<<api_key>>&language=en-US&page=1
 
     fetch("https://api.themoviedb.org/3/movie/popular?api_key=72c0f0e3c6590f5af907c8bd0778da1d&language=en-US&page=1" )
           .then(function(respuesta) {

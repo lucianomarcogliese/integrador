@@ -9,6 +9,9 @@ window.onload = function() {
   var buscador = queryString.get("q")
 
 
+document.querySelector("input.Busqueda").value= buscador
+document.querySelector ("input.busqueda2").value = buscador
+
 // IDEA: "https://api.themoviedb.org/3/search/collection?api_key=72c0f0e3c6590f5af907c8bd0778da1d&language=" + buscador + "en-US&page=1"
 // IDEA:
   fetch("https://api.themoviedb.org/3/search/movie?api_key=489728903a2b25dc358b98664c14a627&query="  + buscador +  "&page=1&include_adult=true")

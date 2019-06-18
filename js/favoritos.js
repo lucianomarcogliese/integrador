@@ -22,37 +22,39 @@
 
   var favoritos = localStorage.getItem("favoritos")
   favoritos = JSON.parse(favoritos).listadoFavoritos
-  var article = ""
- fetch( "https://api.themoviedb.org/3/movie/" + favoritos + "?api_key=72c0f0e3c6590f5af907c8bd0778da1d&language=en-US")
-        .then(function(respuesta) {
-        return respuesta.json()
-        })
-        .then(function(informacion) {
-          console.log(informacion);
 
+
+
+
+  var article = ""
+for (var i = 0; i < favoritos.length; i++) {
+console.log(favoritos);
+
+
+fetch( "https://api.themoviedb.org/3/movie/" + favoritos[i] + "?api_key=72c0f0e3c6590f5af907c8bd0778da1d&language=en-US")
+.then(function(respuesta) {
+  return respuesta.json()
+})
+.then(function(informacion) {
+  console.log(informacion);
 
 
 var limite= 5
-          for (var i = 0; i < favoritos.length; i++) {
 
                var id = informacion.id
-               console.log(id);
-
-
               var titulo = informacion.title
-
               var url =  informacion.poster_path
 
                     article = "<article class='mySlides fade'> "
                     article +=    "<a href=detallePelicula.html?id=" + id +   ">"
                     article +=      "<p>" + titulo + "</p> "
                     article +=      "<img src= " + urlFija + url + " width='30%'  >"
-                    article +=      "<div class='numbertext'>" + (i+1) + " / "+limite+"</div>"
+                    // article +=      "<div class='numbertext'>" + (i+1) + " / "+limite+"</div>"
                     article +=  "</a>"
                     article += " </article>"
 
-                                        document.querySelector("div.preferidas ").innerHTML += article
-          }
+                                        document.querySelector(".preferidas ").innerHTML += article
+
               showSlides(slideIndex);
             })
 
@@ -63,4 +65,4 @@ var limite= 5
         console.log("Error: " + error);
           })
 
-}
+} }

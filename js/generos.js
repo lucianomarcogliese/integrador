@@ -42,7 +42,7 @@ window.addEventListener("load",function() {
 
         var genero = information.genres[i].name
 
-        document.querySelector("select").innerHTML += " <option value='PeliculasPorGenero.html?id=" + id+"'> " + genero +  "  </option> "
+        document.querySelector("select").innerHTML += " <option value='PeliculasPorGenero.html?id=" + id+"&genero="+genero+"'> " + genero +  "  </option> "
         //console.log(genero);
       }
 

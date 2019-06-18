@@ -6,6 +6,8 @@ window.onload = function() {
   queryString =new URLSearchParams(location.search)
   var idGenero = queryString.get("id")
   console.log(idGenero);
+  var queryString1 = location.search
+  var nombreGenero = queryString.get("genero")
 
 
   var buscador = document.querySelector ("form.Buscador");
@@ -24,6 +26,7 @@ window.onload = function() {
 
     } }
 
+document.querySelector(".genero").innerHTML= "El genero que se busco fue:" + nombreGenero
 var urlFija = " https://image.tmdb.org/t/p/original/"
   fetch("https://api.themoviedb.org/3/discover/movie?api_key=72c0f0e3c6590f5af907c8bd0778da1d&sort_by=popularity.desc&include_adult=true&include_video=true&page=1&with_genres="  + idGenero   )
     .then(function(respuesta) {

@@ -4,7 +4,7 @@ window.onload = function() {
 
     var urlFija = " https://image.tmdb.org/t/p/original/"
     var article = ""
-    var limite = 5
+    var limite = 10
 
   var buscador = document.querySelector ("form.Buscador");
 
@@ -27,14 +27,20 @@ window.onload = function() {
       btn.onclick = function (event) {
         bloqueado.style.display = "block";
         header.style.display ="none";  }
-        var header1 = document.querySelector(".permitido")
-        var bloqueado1 = document.querySelector (".formulario")
-        var btn1 =document.querySelector(".loguin")
-        btn1.onclick = function (event) {
-          bloqueado1.style.display = "block";
-          header1.style.display ="none";  }
-        //Login
-
+        var header = document.querySelector(".permitido")
+        var bloqueado = document.querySelector (".formulario")
+        var btn =document.querySelector(".loguiate")
+        btn.onclick = function (event) {
+          bloqueado.style.display = "block";
+          header.style.display ="none";  }
+        // var header1 = document.querySelector(".permitido")
+        // var bloqueado1 = document.querySelector (".formulario2")
+        // var btn1 =document.querySelector(".loguin")
+        // btn1.onclick = function (event) {
+        //   bloqueado1.style.display = "block";
+        //   header.style.display ="none";  }
+        // //Login
+         //
          // var encabezado = document.querySelector(".permitido")
          // var blocked = document.querySelector (".iniciaSesion")
          // var loguea =document.querySelector(".loguiate")
@@ -69,7 +75,7 @@ window.onload = function() {
               article = "<article class='mySlides fade'> "
               article +=    "<a href=detallePelicula.html?id=" + id +   ">"
               article +=    " <p>" + title + "</p> "
-              article +=      "<img src= " + urlFija + url + " width='30%'  >"
+              article +=      "<img src= " + urlFija + url + " width='20%'  >"
               article +=    "</a>"
               article +=    "<div class='numbertext'>" + (i+1) + " / "+limite+"</div>"
               article += "</article>"
@@ -93,7 +99,7 @@ window.onload = function() {
                   var arrayDePuntuadas = informacion.results
 
 
-                  for (var i = 0; i < 5; i++) {
+                  for (var i = 0; i < limite; i++) {
                   var id = arrayDePuntuadas[i].id
                   var title2 = arrayDePuntuadas[i].title
                   var url2 =  arrayDePuntuadas[i].poster_path
@@ -102,7 +108,7 @@ window.onload = function() {
                       article2 = "<article class='mySlidesPuntuadas fade'> "
                       article2 +=  "<a href=detallePelicula.html?id=" + id +   ">"
                       article2 +=  "<p> " + title2 + "</p> "
-                     article2 +=        "<img src= " + urlFija + url2 + " width='30%'  >"
+                     article2 +=        "<img src= " + urlFija + url2 + " width='20%'  >"
                      article2 +=    "</a>"
                      article2 +=    "<div class='numbertext'>" + (i+1) + " / "+limite+"</div>"
                      article2 +=  "</article>"
@@ -118,6 +124,8 @@ window.onload = function() {
                   console.log("Error: " + error);
                   })
 
+// IDEA: https://api.themoviedb.org/3/movie/upcoming?api_key=<<api_key>>&language=en-US&page=1
+
 
                   fetch("https://api.themoviedb.org/3/movie/upcoming?api_key=72c0f0e3c6590f5af907c8bd0778da1d&language=en-US&page=1" )
                         .then(function(respuesta) {
@@ -132,7 +140,7 @@ window.onload = function() {
                   var title3
                   var url3
                   var id
-                  for (var i = 0; i < 5; i++) {
+                  for (var i = 0; i < limite; i++) {
                      id= arrayDeEstrenos[i].id
                   title3 = arrayDeEstrenos[i].title
                   url3 =  arrayDeEstrenos[i].poster_path
@@ -141,7 +149,7 @@ window.onload = function() {
                     article = "<article class='mySlidesEstrenos fade'> "
                     article +="<a href=detallePelicula.html?id=" + id+   ">"
                     article +=  " <p>" + title3 + "</p> "
-                    article += "<img src= " + urlFija + url3 + " width='30%'  >"
+                    article += "<img src= " + urlFija + url3 + " width='20%'  >"
                     article +="<div class='numbertext'>" + (i+1) + " / "+limite+"</div>"
                     article += "  </a> </article>"
                     document.querySelector("section.estrenos ").innerHTML += article

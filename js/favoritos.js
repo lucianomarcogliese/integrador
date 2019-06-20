@@ -1,5 +1,16 @@
  window.onload = function() {
-
+   var header = document.querySelector(".permitido")
+   var bloqueado = document.querySelector (".formulario")
+   var btn =document.querySelector(".boton2")
+   btn.onclick = function (event) {
+     bloqueado.style.display = "block";
+     header.style.display ="none";  }
+     var header = document.querySelector(".permitido")
+     var bloqueado = document.querySelector (".formulario")
+     var btn =document.querySelector(".loguiate")
+     btn.onclick = function (event) {
+       bloqueado.style.display = "block";
+       header.style.display ="none";  }
    var urlFija = " https://image.tmdb.org/t/p/original/"
    var article = ""
 
@@ -23,10 +34,15 @@
   var favoritos = localStorage.getItem("favoritos")
   favoritos = JSON.parse(favoritos).listadoFavoritos
 
-
+  console.log(favoritos.length);
 
 
   var article = ""
+
+  if (favoritos.length == 0 ) {
+    document.querySelector("h5").innerHTML = "No hay niguna pelicula en tu lista"
+
+  }
 for (var i = 0; i < favoritos.length; i++) {
 console.log(favoritos);
 
@@ -49,6 +65,7 @@ var limite= 5
                     article +=    "<a href=detallePelicula.html?id=" + id +   ">"
                     article +=      "<p>" + titulo + "</p> "
                     article +=      "<img src= " + urlFija + url + " width='30%'  >"
+
                     // article +=      "<div class='numbertext'>" + (i+1) + " / "+limite+"</div>"
                     article +=  "</a>"
                     article += " </article>"
@@ -64,5 +81,11 @@ var limite= 5
         .catch(function(error) {
         console.log("Error: " + error);
           })
+
+          // if (favoritos > 0) {
+          //   document.querySelector(".preferidas").innerHTML += "No hay ninguna pelicula en tu lista"
+          //
+          // }
+
 
 } }

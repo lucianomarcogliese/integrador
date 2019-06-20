@@ -1,6 +1,17 @@
 window.onload = function() {
 
-
+  var header = document.querySelector(".permitido")
+  var bloqueado = document.querySelector (".formulario")
+  var btn =document.querySelector(".boton2")
+  btn.onclick = function (event) {
+    bloqueado.style.display = "block";
+    header.style.display ="none";  }
+    var header = document.querySelector(".permitido")
+    var bloqueado = document.querySelector (".formulario")
+    var btn =document.querySelector(".loguiate")
+    btn.onclick = function (event) {
+      bloqueado.style.display = "block";
+      header.style.display ="none";  }
 
   var queryString = location.search
   queryString =new URLSearchParams(location.search)
@@ -27,6 +38,7 @@ window.onload = function() {
     } }
 
 document.querySelector(".genero").innerHTML= "El genero que se busco fue:" + nombreGenero
+
 var urlFija = " https://image.tmdb.org/t/p/original/"
   fetch("https://api.themoviedb.org/3/discover/movie?api_key=72c0f0e3c6590f5af907c8bd0778da1d&sort_by=popularity.desc&include_adult=true&include_video=true&page=1&with_genres="  + idGenero   )
     .then(function(respuesta) {
@@ -38,8 +50,8 @@ var urlFija = " https://image.tmdb.org/t/p/original/"
       var arrayDePeliculas = informacion.results
 
       var article = ""
-      var limite = 5
-      for (var i = 0; i < 5; i++) {
+      var limite = 10
+      for (var i = 0; i < limite; i++) {
          var id = arrayDePeliculas[i].id
         var title = arrayDePeliculas[i].title
 

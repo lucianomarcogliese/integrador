@@ -85,16 +85,18 @@ if (favoritos != null) {
                               article +=  " <h1>" + titulo+ "</h1> "
                              article += "<li> <img src= " + urlFija + url + " width='30%'  > </li>"
                             // IDEA: rticle +=    "<a href=PeliculasPorGenero.html?id=" + idDeGeneros +   ">"
-                             article +=   " <section class='informacion'> <ul class='generos'>" + "Los generos a los que pertenece"
+                             article +=   " <section class='informacion'> <ul class='generos'>" + "<div <a class= 'color-red'>" + "LOS GENEROS A LOS QUE PERTENECE SON: (clickee en los generos si quiere ver peliculas relacionadas a estos)" +  " </a>"
                              for (var i = 0; i < arrayDeGeneros.length; i++) {
-                                 article += "<li>  <a href='PeliculasPorGenero.html?id=" + arrayDeGeneros[i].id +  "'>" +  arrayDeGeneros[i].name +  "</a> </li>"
+
+                                 article += "<li>  <a href='PeliculasPorGenero.html?id=" + arrayDeGeneros[i].id + "&genero="+arrayDeGeneros[i].name+"'>"   +  arrayDeGeneros[i].name +  "</a> </li>"
                              }
                             article +=  "</ul>"
 
-                             article += "Sinopsis" + "<p class='sinopsis'>" + sinopsis + "</p>"
-                             article += "Idiomas" + "<p>" + language + "</p>"
-                             article += "Fecha de estreno" + "<h4>" + fecha + "</h4>"
-
+                             article += "<div> <a class='color-red' >" + "SINOPSIS" + "</a>" + "<p class='sinopsis'>" + sinopsis + "</p>"
+                             article += "<div> <a class='color-red'>" + "IDIOMAS:" +  "</a>"  + "    " +  language + " </div>"
+                             article += "<div  <a class='color-red'>"  + "FECHA DE ESTRENO:" + "   " +  "</a>" + fecha + "</div>"
+                             article +=  "<button class='trailer1'  type='button' name='button'> Ver trailer </button>"
+                            article += "<button class='trailer2'  type='button' style= 'display:none' name='button'> Ocultar trailer </button>"
                              // IDEA: rticle +=  "<div>" + trailer + "<div>"
 
                              article += " </section>  </article>"
@@ -109,6 +111,19 @@ if (favoritos != null) {
                            console.log("hola");
                            // IDEA: document.querySelector("section.detalle").innerHTML += "<img src=" + url + ">"
                            // Bien! Ya cree todos los botones (Ojo que igual ustedes van a tener uno solo). Entonces los obtengo con querySelectorAll
+                          var botonOcultar = document.querySelector(".trailer2")
+                           var botonTrailer = document.querySelector (".trailer1")
+                           var trailer = document.querySelector ("div.video")
+                           botonTrailer.onclick = function (event) {
+                                 trailer.style.display = "block";
+                                 botonTrailer.style.display = "none";
+                                 botonOcultar.style.display = "block";
+                           }
+                           botonOcultar.onclick = function(event) {
+                             trailer.style.display = "none";
+                             botonTrailer.style.display = "block";
+                           botonOcultar.style.display = "none";
+                           }
                            var boton = document.querySelector("button.favorito")
 
                               // A CADA BOTON le pongo un evento onclick
@@ -209,7 +224,7 @@ fetch("https://api.themoviedb.org/3/movie/" + idPeliculas + "/recommendations?ap
 
         var url =  arrayDePeliculas[i].poster_path
 
-              article = "<article class='mySlides fade'> "
+              article = "<article class='mySlides fade recomendates'> "
               article +=    "<a href=detallePelicula.html?id=" + id +   ">"
               article +=      "<p>" + titulo + "</p> "
               article +=      "<img src= " + urlFija + url + " width='30%'  >"
@@ -227,13 +242,26 @@ fetch("https://api.themoviedb.org/3/movie/" + idPeliculas + "/recommendations?ap
   .catch(function(error) {
   console.log("Error: " + error);
   })
-
-
+                var ocultarRecomendaciones = document.querySelector (".botonsito2")
+                var footer = document.querySelector ("footer")
               var recomendadas = document.querySelector("section.recomendadas")
               var botonsito = document.querySelector (".botonsito")
 
+
               botonsito.onclick = function (event) {
                 recomendadas.style.display = "block";
+                botonsito.style.display = "none";
+                ocultarRecomendaciones.style.display = "block";
+                footer.style.display ="none";
+                ocultarRecomendaciones.onclick = function (event) {
+                  recomendadas.style.display = "none";
+                   footer.style.display = "block";
+                  ocultarRecomendaciones.style.display = "none"
+                  botonsito.style.display = "block";
+                }
+
+
+
 
 
 

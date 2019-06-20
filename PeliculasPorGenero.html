@@ -3,47 +3,51 @@
   <head>
     <link rel="stylesheet" href="css/tpi.css">
     <link rel="stylesheet" href="css/slideShow.css">
+
     <meta charset="utf-8">
     <title></title>
   </head>
   <body>
-    <header class="header">
-                   <nav>
-                         <ul class="ul-logo">
-                               <li class="li-logo"><img src="img/logo.png" alt="" ></li>
-                         </ul>
-
-                         <ul class="ul-menu">
+    <div class="permitido">
 
 
-                           <li class="li-menu" style="display:none"  id="myList"><a class="color-white" href="pPreferidas.html"> Mi Lista</a></li>
-                           <!-- <li class="li-menu"><a class="color-blue" href="PeliculasxGenero.html">Generos</a> </li> -->
-                           <li class="li-menu">
-                             <select onchange= "location=this.value;">
-                               <option selected="true" disabled="disabled">seleccione el genero</option>
+         <header class="header">
+                        <nav>
+                              <ul class="ul-logo">
+                                    <li class="li-logo"><img src="img/logo.png" alt="" ></li>
+                              </ul>
 
-                               </select>
-                           </li>
-                           <li class="li-menu"><a class="color-white" href="home.html" >Home</a></li>
-                             <li class="li-menu register ">    <button class=boton2 type="button" name="button">Registrate</button>  </li>
-                             <li class= "li-menu logOut" style="display:none"><button type="button">Log out</button></li>
-                             <li class="li-menu login loguiate ">    <button type="button" name="button">Login</button>  </li>
-                         </ul>
+                              <ul class="ul-menu">
+                                   <li class= "li-menu">
+                                <div class=cbusqueda>
+                                  <form class="Buscador" action="pagina4.html" method="get">
+                                    <li class= "li-menu"> <p class = "errorBuscador"></p> </li>
+                                    <input class="Busqueda"  type="search"  id="miBusqueda" name="q"   >
+                                    <br>
+                                    <button class="boton1"  type="submit" >Buscar</button>
+                                    <span style="display:none" class="bienvenida"></span>
+                                  </form>
+                                </div>
+                              </li>
+                                <li class="li-menu" style="display:none"  id="myList"><a class="color-white" href="pPreferidas.html"> Mi Lista</a></li>
+                                <!-- <li class="li-menu"><a class="color-blue" href="PeliculasxGenero.html">Generos</a> </li> -->
+                                <li class="li-menu">
+                                  <select onchange= "  location=this.value;">
+                                    <option selected="true" disabled="disabled">seleccione el genero</option>
 
-                               <div class=cbusqueda>
+                                    </select>
+                                </li>
+                                <li class="li-menu"><a class="color-white" href="home.html" >Home</a></li>
+                                  <li class="li-menu register ">    <button class=" boton2 "   type="button" name="button">Registrate</button>  </li>
+                                  <li class= "li-menu logOut" style="display:none"><button class="logout "  type="button">Log out</button></li>
+                                  <li class="li-menu login loguiate ">    <button class= "loguin perrito " type="button" name="button">Login</button>  </li>
+                              </ul>
 
-                                   <form class="Buscador" action="pagina4.html" method="get">
-                                     <p class = "errorBuscador"></p>
-                                     <input class="Busqueda"  type="search"  id="miBusqueda" name="q"   >
-                                     <button class="boton1"  type="submit" >buscar</button>
-                                     <span style="display:none" class="bienvenida"></span>
-                                   </form>
-                               </div>
-               </nav>
-
+                    </nav>
 
 
-           </header>
+
+                </header>
   <h1>PELICULAS POR GENERO</h1>
   <p class="genero"></p>
   <section class="generos slideshow-container">
@@ -56,9 +60,15 @@
           <span class="dot" onclick="currentSlide(3)"></span>
           <span class="dot" onclick="currentSlide(4)"></span>
           <span class="dot" onclick="currentSlide(5)"></span>
+          <span class="dot" onclick="currentSlide(6)"></span>
+          <span class="dot" onclick="currentSlide(7)"></span>
+          <span class="dot" onclick="currentSlide(8)"></span>
+          <span class="dot" onclick="currentSlide(9)"></span>
+          <span class="dot" onclick="currentSlide(10)"></span>
       </div>
   </section>
 
+</div>
   <div class="formulario">
     <form class="informacion" action="home.html" method="get">
       <p class="errorNombre"></p>
@@ -66,7 +76,7 @@
       <p class= "errorEmail"></p>
       <input class="email" type="email" name="email" value="" placeholder="Email">
 
-        <p><label for="genero"> Genero</label></p>
+
 
         <p><input type="radio" name="genero" value="" placeholder="" > Hombre
           <input type="radio" name="genero" value="" placeholder=""> Mujer
@@ -80,6 +90,25 @@
 
 
   </body>
+  <footer class= "footer">
+    <ul class="ul-footer">
+      <p>   <li class= "li-footer">Luciano Marcogliese</li></p>
+    <p> <li class="li-footer">Joaquin - Juan cruz</li></p>
+
+
+
+    </ul>
+
+     <div class="img-footer">
+      <img src="img/logomovie.png" alt="" width="100px" height="50px">
+      </div>
+
+    </div>
+
+
+
+  </footer>
+
 </html>
 <script
 src="https://code.jquery.com/jquery-3.4.1.js"

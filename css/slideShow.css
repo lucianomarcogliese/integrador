@@ -17,8 +17,8 @@
 .prev, .next {
   cursor: pointer;
   position: absolute;
-  /* color: white; */
-  font-size: 20px;
+   color: #751A1A ;
+  /* font-size: 20px; */
   /*padding: 10px 17px 10px 16px; */
   border-radius: 50%;
   border: 1px solid rgba(0, 0, 0, 0.125);

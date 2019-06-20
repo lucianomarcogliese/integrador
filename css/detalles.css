@@ -1,4 +1,18 @@
 @import url('https://fonts.googleapis.com/css?family=Nunito&display=swap');
+
+.color-red {
+  color: #A29D9D;
+}
+.color-gray {
+  color: #999CAA;
+}
+.color-gainsboro {
+  color: gainsboro;
+}
+.color-black {
+  color: #6E6865;
+}
+
 article {
 height: 110vh;
 }
@@ -6,30 +20,118 @@ height: 110vh;
 section.informacion {
   position: relative;
   left: 36%;
-  top: -550px;
+  bottom: 90%;
   margin: 0;
   font-family: Nunito;
 
+
+}
+div  {
 
 }
 
 p.sinopsis{
   width: 63%;
 text-align: justify;
+color: #9E3939;
+font-size: 20px;
+
+
 }
 ul.generos {
   list-style-type: none;
-  border-left: 7px solid black;
 
 
+
+}
+
+
+
+/* section.informacion {
+  color: #9E3939; */
+p.fechaDeEstrenoFecha{
+  color: white;
+}
+div.idiomas {
+  color:white;
+
+}
+div {
+  color: #9E3939 ;
+}
+h1{
+  color: #720E0E;
 }
 a {
   text-decoration: none;
-  color: black;
+  color: #9E3939;
 }
-.favorito {position: relative;
+ .favorito {
+  position: relative;
     left: 35%;
-    bottom: 200px }
+    bottom: 20px; }
 .video {
-  
+  position: relative;
+
+}
+body {
+  list-style:none;
+ }
+ iframe {
+  position: absolute;
+  left: 50%;
+  bottom: 40%;
+}
+
+button.botonsito {
+ margin-bottom: 5%;
+}
+
+/* div.thumbnails.recomendaciones {
+
+  position: relative;
+  top: 50%;
+} */
+h1 {
+  font-size: 30px;
+}
+.slideshow-container{
+  position: relative;
+  padding-bottom: 45px;
+  text-align: center;
+}
+
+.thumbnailsRecomendaciones{
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+
+    }
+    .loguin:hover {
+      border-bottom: 1px solid white;
+      border-width: medium;
+    }
+
+button.trailer1 {
+  position: relative;
+  top: 10px;
+}
+/* .trailer2 {
+  position: relative;
+  left: 20%;
+  bottom: 300px;
+} */
+
+
+
+
+@media only screen and (min-width: 340px) and (max-width: 800px){
+
+
+p.sinopsis {
+  position: absolute;
+  bottom: 0px;
+}
+
 }

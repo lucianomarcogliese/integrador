@@ -65,6 +65,16 @@ theForm.onsubmit = function () {
      // IDEA: no.
   }
 
+// IDEA: // var login = document.querySelector ("button.loguin")
+// var formulario = document.querySelector ("form.login")
+// var inputNombre = document.querySelector ("input.loginNombre")
+// var inputEmail = document.querySelector ("input.loginEmail")
+// formulario.onsubmit = function () {
+//   if (inputEmail != localStorage.getItem("email"))
+//   event.preventDefault ();
+//   inputEmail.classList.add ("error");
+//   inputEmail.parenElement.querySelector("p.errorLogin").innerText = "El email que ingresa";
+// }
 
 //login
 // var info = document.querySelector ("form.informacion");

@@ -25,6 +25,7 @@ window.addEventListener("load",function() {
   //   console.log("Error: " + error);
   // })
 
+
     fetch("https://api.themoviedb.org/3/genre/movie/list?api_key=489728903a2b25dc358b98664c14a627")
 
     .then(function(response) {

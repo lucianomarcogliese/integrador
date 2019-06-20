@@ -1,7 +1,10 @@
 *{box-sizing: border-box;}
-
+@import url('https://fonts.googleapis.com/css?family=Nunito&display=swap');
+.negro {
+  height: 100%;
+}
 .color-white {
-  color: white;
+  color: #751A1A;
 }
 .color-gray {
   color: #999CAA;
@@ -17,9 +20,40 @@
   background-color: orange;
 
 
+
+}
+button{
+  color: #751A1A;
+  background-color: black;
+  border: none;
+  margin: 0 30px 0 0;
+  padding: 10px;
+  font-size: 0.8em;
+  font-weight: bold;
+}
+select{
+  background-color: black;
+  color: #751A1A;
+  font-size: 0.8em;
+}
+
+li.login {
+  color: #751A1A;
 }
 body{
-  background: gainsboro;
+  background :  #070707;
+  font-family: : Nunito;
+
+}
+body a {
+  text-decoration: none;
+}
+
+div.formulario{
+  background :  #070707;
+}
+.informacion {
+  color: red;
 }
 /* body {
   background-image: url(fondo.png);
@@ -40,8 +74,8 @@ background-color: white;
 border-color: gainsboro;
 margin: 0 30px 0 0;
 padding: 10px;
-font-size: 2em;
-font-weight: bold
+font-size: 1.8em;
+font-weight: bold;
 
   /* font-weight: bold; */
   font-size: 0.5em;
@@ -54,21 +88,45 @@ font-weight: bold
   width: 80px;
   height: 40px;
   margin-top: 35px;
-
+  /* font-weight: bold; */
+  font-size: 1em;
+  color: #751A1A;
+  background-color: black;
+  margin: 0 30px 0 0;
+  padding: 10px;
 
   font-weight: bold;
-  font-size: 1em;
 }
+.boton2:hover {
+  border-bottom: 1px solid white;
+  border-width: medium;
+  }
+    button.loguin:hover {
+    border-bottom: 1px solid white;
+    border-width: medium;
+  }
+
+
 nav {
   overflow: hidden;
+
+
+
+
   /*border-radius: 20px ;*/
 
 }
 
+button.logout{
+
+}
 
 header {
-  /* IDEA: border-radius: 20px;  */
-  background-color: #6E6865;
+
+  background-color: black;
+}
+h1{
+  color: #A29D9D;
 }
 nav ul {
   margin: 0;
@@ -81,8 +139,14 @@ nav ul.ul-logo {
   float: left;
   margin-bottom: 10px;
   position: relative;
-  bottom: 30px;
+  bottom: 50px;
 
+}
+form.Buscador{
+  position: relative;
+  top: 6px;
+  /* margin-left: 20%;
+  margin-top: 10%; */
 }
 nav ul.ul-menu {
   float: right;
@@ -93,20 +157,27 @@ nav ul.ul-menu {
 nav li.li-menu {
   margin: 0 30px 0 0;
   padding: 10px;
-  font-size: 2em;
+  font-size: 1.7em;
   font-weight: bold;
 }
-nav li.li-menu:hover{
+/* nav li.li-menu:hover{
 	border-bottom: 1px solid white;
   border-width: medium;
+} */
+nav a:hover {
+  border-bottom: 1px solid white;
+  border-width: medium;
+
 }
-nav a {
-  text-decoration: none;
-}
+
 
 div.cbusqueda{
   overflow: hidden;
+  position: relative;
+  bottom: 33px;
+
 }
+
 .busqueda{
   float: left;
   margin-top: 40px;
@@ -133,20 +204,32 @@ div.cbusqueda{
   display: none;
 }
 .footer {
-  background-color: #6E6865;
-  /* IDEA: border-radius: 15px;  */
+  background-color: black;
+color: #751A1A;
     overflow: hidden;
-height: 100px;
+height: 110px;
+
+
 
 }
-
+.img-footer {
+  position: absolute;
+  bottom: 100px;
+}
+h5 {
+  color: white;
+  font-size: 1em;
+}
 
 .li-footer {
   float: left;
-  margin: 0 30px 0 0;
-  padding: 10px;
+  width: 100%;
+   margin: 0 30px 0 0;
+   padding: 10px;
   font-size: 1em;
   font-weight: bold;
+  list-style: none;
+  margin-bottom: 2px;
 
 }
 
@@ -170,6 +253,8 @@ article {
  .img-footer {
    float: right;
    margin-right: 20px;
+   position: relative;
+    bottom: 50%;
  }
  .slideshow-container{
    position: relative;
@@ -206,3 +291,38 @@ article {
 section.detalle {
   overflow: hidden;
 }
+p {
+  color: #751A1A;
+  font-size: 30px;
+
+}
+
+p a {
+  text-decoration: none;
+}
+/* form.Buscador {
+  position: relative;
+  top: 20px;
+} */
+section.detalles {
+  margin-bottom: 0px;
+}
+.thumbnails.thumbnailsGeneros{
+  position: absolute;
+  bottom: 10px;
+  /* bottom:  */
+}
+
+/* @media only screen and (min-width: 340px) and (max-width: 800px){
+
+body {
+  color: white;
+  background: blue;
+}
+
+
+ } */
+p.errorBuscador {
+
+   font-size: 20px;
+ }

@@ -12,58 +12,63 @@
 
 
 
-    <header class="header">
-                   <nav>
-                         <ul class="ul-logo">
-                               <li class="li-logo"><img src="img/logo.png" alt="" ></li>
-                         </ul>
 
-                         <ul class="ul-menu">
+         <header class="header">
+                        <nav>
+                              <ul class="ul-logo">
+                                    <li class="li-logo"><img src="img/logo.png" alt="" ></li>
+                              </ul>
+
+                              <ul class="ul-menu">
+                                   <li class= "li-menu">
+                                <div class=cbusqueda>
+                                  <form class="Buscador" action="pagina4.html" method="get">
+                                    <p class = "errorBuscador"></p>
+                                    <input class="Busqueda"  type="search"  id="miBusqueda" name="q"   >
+                                    <br>
+                                    <button class="boton1"  type="submit" >Buscar</button>
+                                    <span style="display:none" class="bienvenida"></span>
+                                  </form>
+                                </div>
+                              </li>
+                                <li class="li-menu" style="display:none"  id="myList"><a class="color-white" href="pPreferidas.html"> Mi Lista</a></li>
+                                <!-- <li class="li-menu"><a class="color-blue" href="PeliculasxGenero.html">Generos</a> </li> -->
+                                <li class="li-menu">
+                                  <select onchange= "  location=this.value;">
+                                    <option selected="true" disabled="disabled">seleccione el genero</option>
+
+                                    </select>
+                                </li>
+                                <li class="li-menu"><a class="color-white" href="home.html" >Home</a></li>
+                                  <li class="li-menu register ">    <button class=" boton2 "   type="button" name="button">Registrate</button>  </li>
+                                  <li class= "li-menu logOut" style="display:none"><button class="logout "  type="button">Log out</button></li>
+                                  <li class="li-menu login loguiate ">    <button class= "loguin perrito " type="button" name="button">Login</button>  </li>
+                              </ul>
+
+                    </nav>
 
 
-                           <li class="li-menu" style="display:none"  id="myList"><a class="color-white" href="pPreferidas.html"> Mi Lista</a></li>
-                           <!-- <li class="li-menu"><a class="color-blue" href="PeliculasxGenero.html">Generos</a> </li> -->
-                           <li class="li-menu">
-                             <select onchange= "location=this.value;">
-                               <option selected="true" disabled="disabled">seleccione el genero</option>
 
-                               </select>
-                           </li>
-                           <li class="li-menu"><a class="color-white" href="home.html" >Home</a></li>
-                             <li class="li-menu register ">    <button class=boton2 type="button" name="button">Registrate</button>  </li>
-                             <li class= "li-menu logOut" style="display:none"><button type="button">Log out</button></li>
-                             <li class="li-menu login loguiate ">    <button type="button" name="button">Login</button>  </li>
-                         </ul>
-
-                               <div class=cbusqueda>
-
-                                   <form class="Buscador" action="pagina4.html" method="get">
-                                     <p class = "errorBuscador"></p>
-                                     <input class="Busqueda"  type="search"  id="miBusqueda" name="q"   >
-                                     <button class="boton1"  type="submit" >buscar</button>
-                                     <span style="display:none" class="bienvenida"></span>
-                                   </form>
-                               </div>
-               </nav>
-
-
-
-           </header>
+                </header>
 
 
 <section class=detalle>
   <!-- <button class= "favorito" type="button" name="button"> Agregar a My List</button> -->
+   <!-- <button class='trailer1'  type='button' name='button'>Ver trailer</button> -->
 </section>
-<div class="video">
+
+<div class="video" style="display:none">
 
 <iframe width="560" height="315" src="" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 
-<button class= "video" type="button" name="button"> Ver Trailer</button>
+
 
 <br>
 <button class= "botonsito" type="button" name="button"> Ver recomendaciones</button>
+<button style = "display: none" class= "botonsito2" type="button" name="button"> Ocultar recomendaciones</button>
+    <!-- <button class='trailer2'  type='button' name='button'> Ocultar trailer </button> -->
 
 
 
@@ -76,15 +81,15 @@
   <a class="next" onclick="plusSlides(1)"><span>&#10095;</span></a>
 
 
-<br>
 
-<div class="thumbnails " style="text-align:center">
+
+<!-- <div class="thumbnails thumbnailsRecomendaciones" style="text-align:center">
   <span class="dot" onclick="currentSlide(1)"></span>
   <span class="dot" onclick="currentSlide(2)"></span>
   <span class="dot" onclick="currentSlide(3)"></span>
   <span class="dot" onclick="currentSlide(4)"></span>
   <span class="dot" onclick="currentSlide(5)"></span>
-</div>
+</div> -->
 </section>
 </div>
 
@@ -95,7 +100,6 @@
         <p class= "errorEmail"></p>
         <input class="email" type="email" name="email" value="" placeholder="Email">
 
-          <p><label for="genero"> Genero</label></p>
 
           <p><input type="radio" name="genero" value="" placeholder="" > Hombre
             <input type="radio" name="genero" value="" placeholder=""> Mujer
@@ -105,6 +109,25 @@
 
       </form>
   </body>
+  <footer class= "footer">
+    <ul class="ul-footer">
+      <p>   <li class= "li-footer">Luciano Marcogliese</li></p>
+    <p> <li class="li-footer">Joaquin - Juan cruz</li></p>
+
+
+
+    </ul>
+
+     <div class="img-footer">
+      <img src="img/logomovie.png" alt="" width="100px" height="50px">
+      </div>
+
+    </div>
+
+
+
+  </footer>
+
 </html>
 <script
 src="https://code.jquery.com/jquery-3.4.1.js"

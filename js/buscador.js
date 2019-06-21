@@ -68,7 +68,7 @@ var search1 = document.querySelector("input.Busqueda")
         var url =  arrayDeBuscador[i].poster_path
 
 
-        article = "<article class='mySlides fade'> "
+        article = "<article class='mySlides fade busqueti'> "
         article +=    "<a href='detallePelicula.html'> <p>" + title + "</p> "
         article +=      "<img src= " + urlFija + url + " width='30%'  >"
         article +=    "</a>"

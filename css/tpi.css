@@ -352,3 +352,16 @@ margin-bottom: 10%;
 .misFavoritas {
 margin-bottom: 10%;
 }
+
+.busqueti {
+  margin-bottom: 10%;
+}
+.thumbnailsBusqueti2  {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+
+
+  margin-bottom: 10%;
+}

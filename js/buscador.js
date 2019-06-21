@@ -1,5 +1,18 @@
 window.onload = function() {
 
+  var header = document.querySelector(".permitido")
+  var bloqueado = document.querySelector (".formulario")
+  var btn =document.querySelector(".boton2")
+  btn.onclick = function (event) {
+    bloqueado.style.display = "block";
+    header.style.display ="none";  }
+    var header = document.querySelector(".permitido")
+    var bloqueado = document.querySelector (".formulario")
+    var btn =document.querySelector(".loguiate")
+    btn.onclick = function (event) {
+      bloqueado.style.display = "block";
+      header.style.display ="none";  }
+
   var buscador = document.querySelector ("form.Buscador");
 
   var inputBusqueda= document.querySelector ("input.Busqueda")

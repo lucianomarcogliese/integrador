@@ -58,7 +58,7 @@ var urlFija = " https://image.tmdb.org/t/p/original/"
         var url = arrayDePeliculas[i].poster_path
 
 
-        article = "<article class='mySlides fade'> "
+        article = "<article class='mySlides fade porGenero'> "
        article += "<div class='numbertext'>" + (i+1) + " / "+limite+"</div>"
      article +=    "<a href=detallePelicula.html?id=" + id +   ">"
        article += "<p>" + title + "</p> "

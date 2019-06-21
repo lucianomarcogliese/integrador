@@ -5,7 +5,7 @@ window.onload = function() {
   var bloqueado = document.querySelector (".formulario")
   var btn =document.querySelector(".boton2")
   btn.onclick = function (event) {
-    alert("hola")
+
     bloqueado.style.display = "block";
     header.style.display ="none";  }
 
@@ -82,7 +82,7 @@ if (favoritos != null) {
         var trailer = informacion.video
 
                               article = "<article>"
-                              article +=  " <h1>" + titulo+ "</h1> "
+                              article +=  " <h1>" + titulo+ "</h1> <br> "
                              article += "<li> <img src= " + urlFija + url + " width='30%'  > </li>"
                             // IDEA: rticle +=    "<a href=PeliculasPorGenero.html?id=" + idDeGeneros +   ">"
                              article +=   " <section class='informacion'> <ul class='generos'>" + "<div <a class= 'color-red'>" + "LOS GENEROS A LOS QUE PERTENECE SON: (clickee en los generos si quiere ver peliculas relacionadas a estos)" +  " </a>"
@@ -94,9 +94,9 @@ if (favoritos != null) {
 
                              article += "<div> <a class='color-red' >" + "SINOPSIS" + "</a>" + "<p class='sinopsis'>" + sinopsis + "</p>"
                              article += "<div> <a class='color-red'>" + "IDIOMAS:" +  "</a>"  + "    " +  language + " </div>"
-                             article += "<div  <a class='color-red'>"  + "FECHA DE ESTRENO:" + "   " +  "</a>" + fecha + "</div>"
-                             article +=  "<button class='trailer1'  type='button' name='button'> Ver trailer </button>"
-                            article += "<button class='trailer2'  type='button' style= 'display:none' name='button'> Ocultar trailer </button>"
+                             article += " <br> <div  <a class='color-red'>"  + "FECHA DE ESTRENO:" + "   " +  "</a>"   + fecha + "  </div>"
+                             article +=  "<br> <button class='trailer1'  type='button' name='button'> Ver trailer </button>"
+                            article += "<br> <button class='trailer2'  type='button' style= 'display:none' name='button'> Ocultar trailer </button>"
                              // IDEA: rticle +=  "<div>" + trailer + "<div>"
 
                              article += " </section>  </article>"
@@ -243,7 +243,7 @@ fetch("https://api.themoviedb.org/3/movie/" + idPeliculas + "/recommendations?ap
   console.log("Error: " + error);
   })
                 var ocultarRecomendaciones = document.querySelector (".botonsito2")
-                var footer = document.querySelector ("footer")
+
               var recomendadas = document.querySelector("section.recomendadas")
               var botonsito = document.querySelector (".botonsito")
 
@@ -252,10 +252,10 @@ fetch("https://api.themoviedb.org/3/movie/" + idPeliculas + "/recommendations?ap
                 recomendadas.style.display = "block";
                 botonsito.style.display = "none";
                 ocultarRecomendaciones.style.display = "block";
-                footer.style.display ="none";
+                // footer.style.display ="none";
                 ocultarRecomendaciones.onclick = function (event) {
                   recomendadas.style.display = "none";
-                   footer.style.display = "block";
+                   // footer.style.display = "block";
                   ocultarRecomendaciones.style.display = "none"
                   botonsito.style.display = "block";
                 }

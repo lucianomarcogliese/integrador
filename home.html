@@ -1,67 +1,59 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <meta charset="utf-8">
-    <title></title>
-    <link rel="stylesheet" href="css/tpi.css">
-    <link rel="stylesheet" href="css/slideShow.css">
-
-
+        <meta charset="utf-8">
+        <title></title>
+        <link rel="stylesheet" href="css/tpi.css">
+        <link rel="stylesheet" href="css/slideShow.css">
   </head>
 
-  <body>
+      <body>
 
-        <div class="permitido">
-
-
-   <header class="header">
-                  <nav>
+            <div class="permitido">
+                <header class="header">
+            <nav>
                         <ul class="ul-logo">
                               <li class="li-logo"><img src="img/logo.png" alt="" ></li>
-                        </ul>
+                          </ul>
 
-                        <ul class="ul-menu">
-                             <li class= "li-menu">
-                          <div class=cbusqueda>
-                            <form class="Buscador" action="pagina4.html" method="get">
-                              <li class= "li-menu"> <p class = "errorBuscador"></p> </li>
-                              <input class="Busqueda"  type="search"  id="miBusqueda" name="q"   >
-                              <br>
-                              <button class="boton1"  type="submit" >Buscar</button>
-                              <span style="display:none" class="bienvenida"></span>
-                            </form>
-                          </div>
-                        </li>
-                          <li class="li-menu" style="display:none"  id="myList"><a class="color-white" href="pPreferidas.html"> Mi Lista</a></li>
+                  <ul class="ul-menu">
+                            <li class= "li-menu">
+                                <div class=cbusqueda>
+                                    <form class="Buscador" action="pagina4.html" method="get">
+                                          <li class= "li-menu"> <p class = "errorBuscador"></p> </li>
+                                          <input class="Busqueda"  type="search"  id="miBusqueda" name="q" >
+                                          <br>
+                                          <button class="boton1"  type="submit" >Buscar</button>
+                                          <span style="display:none" class="bienvenida"></span>
+                                      </form>
+                                </div>
+                            </li>
+                                  <li class="li-menu" style="display:none"  id="myList"><a class="color-white" href="pPreferidas.html"> Mi Lista</a></li>
                           <!-- <li class="li-menu"><a class="color-blue" href="PeliculasxGenero.html">Generos</a> </li> -->
                           <li class="li-menu">
-                            <select onchange= "  location=this.value;">
-                              <option selected="true" disabled="disabled">seleccione el genero</option>
+                              <select onchange= "  location=this.value;">
+                                  <option selected="true" disabled="disabled">seleccione el genero</option>
 
                               </select>
                           </li>
-                          <li class="li-menu"><a class="color-white" href="home.html" >Home</a></li>
-                            <li class="li-menu register ">    <button class=" boton2 "   type="button" name="button">Registrate</button>  </li>
-                            <li class= "li-menu logOut" style="display:none"><button class="logout "  type="button">Log out</button></li>
-                            <li class="li-menu login loguiate ">    <button class= "loguin perrito " type="button" name="button">Login</button>  </li>
-                        </ul>
+                              <li class="li-menu"><a class="color-white" href="home.html" >Home</a></li>
+                              <li class="li-menu register ">    <button class=" boton2 "   type="button" name="button">Registrate</button>  </li>
+                              <li class= "li-menu logOut" style="display:none"><button class="logout "  type="button">Log out</button></li>
+                              <li class="li-menu login loguiate ">    <button class= "loguin perrito " type="button" name="button">Login</button>  </li>
+                    </ul>
 
               </nav>
 
 
 
-          </header>
+    </header>
 
           <h1>LAS PELICULAS MAS POPULARES</h1>
 
-                <section class="populares slideshow-container">
-
-
+            <section class="populares slideshow-container">
 
                     <a class="prev" onclick="plusSlides(-1)"><span>&#10094;</span></a>
                   	<a class="next" onclick="plusSlides(1)"><span>&#10095;</span></a>
-
-
                   <br>
 
                   <div class="thumbnails thumbnailsPopulares  " style="text-align:center">
@@ -78,15 +70,13 @@
                   </div>
 
 
-                </section>
+            </section>
 
                 <h1>LAS PELICULAS MAYOR PUNTUADAS</h1>
                             <section class="puntuadas slideshow-container ">
 
-
                                   <a class="prev" onclick="plusSlides1(-1)"><span>&#10094;</span></a>
                                 	<a class="next" onclick="plusSlides1(1)"><span>&#10095;</span></a>
-
 
                                 <br>
 
@@ -103,18 +93,14 @@
                                   <span class="dot dotPuntuadas" onclick="currentSlide1(10)"></span>
                                 </div>
 
-
-                            </section>
+                  </section>
 
                             <h1>PROXIMAMENTE</h1>
+
                                   <section class="estrenos slideshow-container">
-
-
-
 
                                       <a class="prev" onclick="plusSlides2(-1)"><span>&#10094;</span></a>
                                     	<a class="next" onclick="plusSlides2(1)"><span>&#10095;</span></a>
-
 
                                     <br>
 
@@ -142,11 +128,7 @@
 
             <footer class= "footer">
               <ul class="ul-footer">
-                <p>   <li class= "li-footer">Luciano Marcogliese</li></p>
-              <p> <li class="li-footer">Joaquin - Juan cruz</li></p>
-
-
-
+                <p>   <li class= "li-footer">Luciano Marcogliese - Joaquin - Juan  cruz</li></p>
               </ul>
 
                <div class="img-footer">
@@ -219,7 +201,7 @@ crossorigin="anonymous">
   </script>
   <script type="text/javascript" src=js/slideShow.js>
   </script>
-  <script type="text/javascript" src=js/login.js>
+  <script type="text/javascript" src=js/pagina4login.js>
   </script>
   <script type="text/javascript" src=js/generos.js>
   </script>

@@ -63,13 +63,14 @@ var search1 = document.querySelector("input.Busqueda")
       console.log(arrayDeBuscador);
 
       for (var i = 0; i < limite; i++) {
-        // IDEA: var id = arrayDeBuscador[i].id
+         var id = arrayDeBuscador[i].id
         var title = arrayDeBuscador[i].title
         var url =  arrayDeBuscador[i].poster_path
 
 
         article = "<article class='mySlides fade busqueti'> "
-        article +=    "<a href='detallePelicula.html'> <p>" + title + "</p> "
+          article +=    "<a href=detallePelicula.html?id=" + id +   ">"
+        article +=    "<p>" + title + "</p> "
         article +=      "<img src= " + urlFija + url + " width='30%'  >"
         article +=    "</a>"
         article +=    "<div class='numbertext'>" + (i+1) + " / "+limite+"</div>"

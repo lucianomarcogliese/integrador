@@ -6,6 +6,7 @@
 html {
   min-height: 100%;
   position: relative;
+  font-family: Nunito;
    }
 .color-white {
   color: #751A1A;
@@ -26,6 +27,7 @@ html {
 
 
 }
+
 button{
   color: #751A1A;
   background-color: black;

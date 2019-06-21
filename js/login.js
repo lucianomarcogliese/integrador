@@ -73,7 +73,7 @@ theForm.onsubmit = function () {
 //   if (inputEmail != localStorage.getItem("email"))
 //   event.preventDefault ();
 //   inputEmail.classList.add ("error");
-//   inputEmail.parenElement.querySelector("p.errorLogin").innerText = "El email que ingresa";
+//   inputEmail.parenElement.querySelector("p.errorLogin").innerText = "El email";
 // }
 
 //login

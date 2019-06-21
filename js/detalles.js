@@ -4,10 +4,9 @@ window.onload = function() {
   var header = document.querySelector(".permitido")
   var bloqueado = document.querySelector (".formulario")
   var btn =document.querySelector(".boton2")
-  btn.onclick = function (event) {
-
-    bloqueado.style.display = "block";
-    header.style.display ="none";  }
+        btn.onclick = function (event) {
+            bloqueado.style.display = "block";
+            header.style.display ="none";  }
 
     // var encabezado = document.querySelector(".permitido")
     // var blocked = document.querySelector (".iniciaSesion")
@@ -16,28 +15,26 @@ window.onload = function() {
     //   blocked.style.display = "block";
     //  encabezado.style.display ="none"; }
 
-
-
-  var buscador = document.querySelector ("form.Buscador");
-
-  var inputBusqueda= document.querySelector ("input.Busqueda")
+    var buscador = document.querySelector ("form.Buscador");
+    var inputBusqueda= document.querySelector ("input.Busqueda")
 
 
   buscador.onsubmit = function () {
-    if (inputBusqueda.value.length < 3 ) {
-      event.preventDefault ();
-      inputBusqueda.classList.add ("error");
-      inputBusqueda.parentElement.querySelector("p.errorBuscador").innerText = "Minimo 3 caracteres";
+      if (inputBusqueda.value.length < 3 ) {
+          event.preventDefault ();
+            inputBusqueda.classList.add ("error");
+            inputBusqueda.parentElement.querySelector("p.errorBuscador").innerText = "Minimo 3 caracteres";
       setTimeout(function() {
           inputBusqueda.parentElement.querySelector("p.errorBuscador").style.display = "none"
       }, 3000)
 
     } }
+
   var urlFija = " https://image.tmdb.org/t/p/original/"
   var article = ""
 
   var queryString = location.search
-  queryString =new URLSearchParams(location.search)
+    queryString =new URLSearchParams(location.search)
   var idPeliculas = queryString.get("id")
   console.log(idPeliculas);
 
@@ -104,9 +101,9 @@ if (favoritos != null) {
 
                              if (favoritos.indexOf(idPeliculas) >= 0) {
 
-                           document.querySelector("section.detalle").innerHTML += "<button class='favorito' idPeli=" + idPeliculas + ">Quitar de Favoritos</button><br>"
+                           document.querySelector("section.detalle").innerHTML += "<button class='favorito' idPeli=" + idPeliculas + ">★Quitar de Favoritos★</button><br>"
                            } else {
-                           document.querySelector("section.detalle").innerHTML += "<button class='favorito' idPeli=" + idPeliculas + ">Agregar a Favoritos</button><br>"
+                           document.querySelector("section.detalle").innerHTML += "<button class='favorito' idPeli=" + idPeliculas + ">✩Agregar a Favoritos✩</button><br>"
                            }
                            console.log("hola");
                            // IDEA: document.querySelector("section.detalle").innerHTML += "<img src=" + url + ">"
@@ -137,13 +134,13 @@ if (favoritos != null) {
                                  //Agrego el gif nuevo!
                                  favoritos.push(idPeli)
                                  //Y cambio el texto del boton
-                                 this.innerHTML = "Quitar de Favoritos"
+                                 this.innerHTML = "★Quitar de Favoritos★"
                                } else {
                                  // Lo tengo que quitar!!!
                                  var index = favoritos.indexOf(idPeli);
                                  favoritos.splice(index, 1);
                                  // Y cambio el texto del boton
-                                 this.innerHTML = "Agregar a Favoritos"
+                                 this.innerHTML = "✩Agregar a Favoritos✩"
                                }
                                // Aca transformo el array en un obj literal para poder guardarlo
                                favoritos = {
@@ -252,10 +249,10 @@ fetch("https://api.themoviedb.org/3/movie/" + idPeliculas + "/recommendations?ap
                 recomendadas.style.display = "block";
                 botonsito.style.display = "none";
                 ocultarRecomendaciones.style.display = "block";
-                // footer.style.display ="none";
+
                 ocultarRecomendaciones.onclick = function (event) {
                   recomendadas.style.display = "none";
-                   // footer.style.display = "block";
+                
                   ocultarRecomendaciones.style.display = "none"
                   botonsito.style.display = "block";
                 }

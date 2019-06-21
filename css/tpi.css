@@ -298,6 +298,12 @@ article {
       bottom: 10px;
       width: 100%;
       text-align: center;
+      bottom: 16%;
+
+    }
+
+    .mySlidesEstrenos{
+      margin-bottom: 10%;
     }
 section.detalle {
   overflow: hidden;

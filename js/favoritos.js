@@ -82,7 +82,7 @@ var limite= 5
         console.log("Error: " + error);
           })
 
-          // if (favoritos > 0) {
+          // if (favoritos.length = 0) {
           //   document.querySelector(".preferidas").innerHTML += "No hay ninguna pelicula en tu lista"
           //
           // }

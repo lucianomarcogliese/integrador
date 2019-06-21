@@ -40,7 +40,7 @@
   var article = ""
 
   if (favoritos.length == 0 ) {
-    document.querySelector("h5").innerHTML = "No hay niguna pelicula en tu lista"
+    document.querySelector("h5").innerHTML = "No hay ninguna pelicula en tu lista"
 
   }
 for (var i = 0; i < favoritos.length; i++) {

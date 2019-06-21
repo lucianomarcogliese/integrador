@@ -61,7 +61,7 @@ var limite= 5
               var titulo = informacion.title
               var url =  informacion.poster_path
 
-                    article = "<article class='mySlides fade'> "
+                    article = "<article class='mySlides fade misFavoritas'> "
                     article +=    "<a href=detallePelicula.html?id=" + id +   ">"
                     article +=      "<p>" + titulo + "</p> "
                     article +=      "<img src= " + urlFija + url + " width='30%'  >"
